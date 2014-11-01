@@ -1,0 +1,38 @@
+<?xml version = "1.0" encoding="utf-8" ?>
+<ScintillaNET>
+    <Language Name="65816">
+        <Indentation TabWidth="4" UseTabs="false"/>
+        <Lexer LineCommentPrefix=";" >
+            <Keywords List="0" Inherit="False">
+                adc adc and asl bcc bcs beq bit bmi bne bpl
+                bra brk brl bvc bvs clc cld cli clv cmp cop
+                cpx cpy dec dex dey eor inc inx iny jmp jsr
+                lda ldx ldy lsr mvn mvp nop ora pea pei per
+                pha phb phd phk php phx phy pla plb pld plp
+                plx ply rep rol ror rti rtl rts sbc sec sed
+                sei sep sta stp stx sty stz tax tay tcd tcs
+                tdc trb tsb tsc tsx txa txs txy tya tyx wai
+                wdm xba xce
+            </Keywords>
+            <Keywords List="3" Inherit="False">
+                .bank .ends .incbin .include .org .section
+            </Keywords>
+        </Lexer>
+        <Styles>
+            <Style Name="COMMENT" ForeColor="#00AA00"/>	
+            <Style Name="NUMBER" ForeColor="#B5BD68"/>
+            <Style Name="STRING" ForeColor="#4271AE"/>
+            <Style Name="OPERATOR" ForeColor="#81A2bE"/>
+            <Style Name="IDENTIFIER" ForeColor="#C82829"/>
+            <Style Name="CPUINSTRUCTION" ForeColor="#0000FF"/>
+            <Style Name="MATHINSTRUCTION" ForeColor="#0000FF"/>
+            <Style Name="REGISTER" ForeColor="#C82829"/>
+            <Style Name="DIRECTIVE" ForeColor="#3E999F"/>
+            <Style Name="DIRECTIVEOPERAND" ForeColor="#F5871F"/>
+            <Style Name="COMMENT Block" ForeColor="#EFEFEF"/>
+            <Style Name="CHARACTER" ForeColor="#FFFFFF"/>
+            <Style Name="STRINGEOL" ForeColor="#FFFFFF"/>
+            <Style Name="EXTINSTRUCTION" ForeColor="#FFFFFF"/>
+        </Styles>
+    </Language>
+</ScintillaNET>

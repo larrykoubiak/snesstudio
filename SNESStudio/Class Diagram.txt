@@ -1,0 +1,27 @@
+ ---------------------------		
+|	class SNESPROJECT		|			
+ ---------------------------			
+|	string		name		|			
+|	string		path		|				
+|	<SNESFile> 	files		|			
+ ---------------------------			
+
+ ---------------------------		 -----------------------		 -----------------------			 -----------------------
+|	class SNESFILE			|		|	object TREEVIEWITEM	|		|	object	TABPAGE		|			|	object ScintillaDoc	|
+ ---------------------------		 -----------------------		 -----------------------			 -----------------------
+|	string 	   	filename 	|
+|	string 		path		|
+|	SNESFileType type		|
+|	bool 		HasChanged	|
+ ---------------------------
+ 
+  --------------------------	
+ |	enum SNESFileType		|	
+  --------------------------	
+ |	Source, 				|
+ |	Header,					|	
+ |	Graphics, 				|
+ |	Palette,				|
+ |	Map, 					|
+ |	Binary					|	
+  --------------------------	
