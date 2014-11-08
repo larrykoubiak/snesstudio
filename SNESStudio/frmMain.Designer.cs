@@ -74,34 +74,34 @@
             this.mnuFileSaveProject,
             this.mnuFileQuit});
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(35, 20);
+            this.mnuFile.Size = new System.Drawing.Size(37, 20);
             this.mnuFile.Text = "File";
             // 
             // mnuFileNewProject
             // 
             this.mnuFileNewProject.Name = "mnuFileNewProject";
-            this.mnuFileNewProject.Size = new System.Drawing.Size(137, 22);
+            this.mnuFileNewProject.Size = new System.Drawing.Size(143, 22);
             this.mnuFileNewProject.Text = "New Project";
             this.mnuFileNewProject.Click += new System.EventHandler(this.mnuFileNewProject_Click);
             // 
             // mnuFileOpenProject
             // 
             this.mnuFileOpenProject.Name = "mnuFileOpenProject";
-            this.mnuFileOpenProject.Size = new System.Drawing.Size(137, 22);
+            this.mnuFileOpenProject.Size = new System.Drawing.Size(143, 22);
             this.mnuFileOpenProject.Text = "Open Project";
             this.mnuFileOpenProject.Click += new System.EventHandler(this.mnuFileOpenProject_Click);
             // 
             // mnuFileSaveProject
             // 
             this.mnuFileSaveProject.Name = "mnuFileSaveProject";
-            this.mnuFileSaveProject.Size = new System.Drawing.Size(137, 22);
+            this.mnuFileSaveProject.Size = new System.Drawing.Size(143, 22);
             this.mnuFileSaveProject.Text = "Save Project";
             this.mnuFileSaveProject.Click += new System.EventHandler(this.mnuFileSaveProject_Click);
             // 
             // mnuFileQuit
             // 
             this.mnuFileQuit.Name = "mnuFileQuit";
-            this.mnuFileQuit.Size = new System.Drawing.Size(137, 22);
+            this.mnuFileQuit.Size = new System.Drawing.Size(143, 22);
             this.mnuFileQuit.Text = "Quit";
             this.mnuFileQuit.Click += new System.EventHandler(this.mnuFileQuit_Click);
             // 
@@ -110,13 +110,13 @@
             this.projectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProjectAddSource});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.projectToolStripMenuItem.Text = "Project";
             // 
             // mnuProjectAddSource
             // 
             this.mnuProjectAddSource.Name = "mnuProjectAddSource";
-            this.mnuProjectAddSource.Size = new System.Drawing.Size(129, 22);
+            this.mnuProjectAddSource.Size = new System.Drawing.Size(135, 22);
             this.mnuProjectAddSource.Text = "Add Source";
             this.mnuProjectAddSource.Click += new System.EventHandler(this.mnuProjectAddSource_Click);
             // 
@@ -138,7 +138,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(38, 15);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 15);
             this.toolStripStatusLabel1.Text = "Ready";
             // 
             // tableLayoutPanel1
