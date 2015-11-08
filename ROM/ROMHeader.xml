@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROMHeader>
+	<Chipset>
+		<ChipsetId>0</ChipsetId>
+		<ChipsetDescription>ROM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>1</ChipsetId>
+		<ChipsetDescription>ROM+RAM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>2</ChipsetId>
+		<ChipsetDescription>ROM+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>3</ChipsetId>
+		<ChipsetDescription>ROM+DSP</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>4</ChipsetId>
+		<ChipsetDescription>ROM+DSP+RAM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>5</ChipsetId>
+		<ChipsetDescription>ROM+DSP+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>19</ChipsetId>
+		<ChipsetDescription>ROM+MarioChip1/ExpansionRAM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>20</ChipsetId>
+		<ChipsetDescription>ROM+GSU+RAM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>21</ChipsetId>
+		<ChipsetDescription>ROM+GSU+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>26</ChipsetId>
+		<ChipsetDescription>ROM+GSU1+RAM+Battery+Fast Mode</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>37</ChipsetId>
+		<ChipsetDescription>ROM+OBC1+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>50</ChipsetId>
+		<ChipsetDescription>ROM+SA1+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>52</ChipsetId>
+		<ChipsetDescription>ROM+SA1+RAM</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>53</ChipsetId>
+		<ChipsetDescription>ROM+SA1+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>67</ChipsetId>
+		<ChipsetDescription>ROM+S-DD1</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>69</ChipsetId>
+		<ChipsetDescription>ROM+S-DD1+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>85</ChipsetId>
+		<ChipsetDescription>ROM+S-RTC+RAM+Battery</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>227</ChipsetId>
+		<ChipsetDescription>ROM+Super Gameboy</ChipsetDescription>
+	</Chipset>
+	<Chipset>
+		<ChipsetId>229</ChipsetId>
+		<ChipsetDescription>ROM+Satellaview</ChipsetDescription>
+	</Chipset>
+	<Country>
+		<CountryId>0</CountryId>
+		<CountryDescription>Japan</CountryDescription>
+		<CountryVideoMode>NTSC</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>1</CountryId>
+		<CountryDescription>USA/Canada</CountryDescription>
+		<CountryVideoMode>NTSC</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>2</CountryId>
+		<CountryDescription>Europe/Oceania/Asia</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>3</CountryId>
+		<CountryDescription>Sweden/Scandinavia</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>4</CountryId>
+		<CountryDescription>Finland</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>5</CountryId>
+		<CountryDescription>Denmark</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>6</CountryId>
+		<CountryDescription>France</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>7</CountryId>
+		<CountryDescription>Holland</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>8</CountryId>
+		<CountryDescription>Spain</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>9</CountryId>
+		<CountryDescription>Germany</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>10</CountryId>
+		<CountryDescription>Italy</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>11</CountryId>
+		<CountryDescription>China/Hong Kong</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>12</CountryId>
+		<CountryDescription>Indonesia</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>13</CountryId>
+		<CountryDescription>South Korea</CountryDescription>
+		<CountryVideoMode>NTSC</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>14</CountryId>
+		<CountryDescription>Common (?)</CountryDescription>
+		<CountryVideoMode>Unknown</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>15</CountryId>
+		<CountryDescription>Canada</CountryDescription>
+		<CountryVideoMode>NTSC</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>16</CountryId>
+		<CountryDescription>Brazil</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>17</CountryId>
+		<CountryDescription>Australia</CountryDescription>
+		<CountryVideoMode>PAL</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>18</CountryId>
+		<CountryDescription>Other variation</CountryDescription>
+		<CountryVideoMode>Unknown</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>19</CountryId>
+		<CountryDescription>Other variation</CountryDescription>
+		<CountryVideoMode>Unknown</CountryVideoMode>
+	</Country>
+	<Country>
+		<CountryId>20</CountryId>
+		<CountryDescription>Other variation</CountryDescription>
+		<CountryVideoMode>Unknown</CountryVideoMode>
+	</Country>
+	<License>
+		<LicenseId>0</LicenseId>
+	</License>
+	<License>
+		<LicenseId>1</LicenseId>
+		<LicenseDescription>Nintendo</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>3</LicenseId>
+		<LicenseDescription>Imagineer-Zoom</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>5</LicenseId>
+		<LicenseDescription>Zamuse</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>6</LicenseId>
+		<LicenseDescription>Falcom</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>8</LicenseId>
+		<LicenseDescription>Capcom</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>9</LicenseId>
+		<LicenseDescription>HOT-B</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>10</LicenseId>
+		<LicenseDescription>Jaleco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>11</LicenseId>
+		<LicenseDescription>Coconuts</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>12</LicenseId>
+		<LicenseDescription>Rage Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>14</LicenseId>
+		<LicenseDescription>Technos</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>15</LicenseId>
+		<LicenseDescription>Mebio Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>18</LicenseId>
+		<LicenseDescription>Gremlin Graphics</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>19</LicenseId>
+		<LicenseDescription>Electronic Arts</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>21</LicenseId>
+		<LicenseDescription>COBRA Team</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>22</LicenseId>
+		<LicenseDescription>Human/Field</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>23</LicenseId>
+		<LicenseDescription>KOEI</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>24</LicenseId>
+		<LicenseDescription>Hudson Soft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>26</LicenseId>
+		<LicenseDescription>Yanoman</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>28</LicenseId>
+		<LicenseDescription>Tecmo</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>30</LicenseId>
+		<LicenseDescription>Open System</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>31</LicenseId>
+		<LicenseDescription>Virgin Games</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>32</LicenseId>
+		<LicenseDescription>KSS</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>33</LicenseId>
+		<LicenseDescription>Sunsoft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>34</LicenseId>
+		<LicenseDescription>POW</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>35</LicenseId>
+		<LicenseDescription>Micro World</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>38</LicenseId>
+		<LicenseDescription>Enix</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>39</LicenseId>
+		<LicenseDescription>Loriciel/Electro Brain</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>40</LicenseId>
+		<LicenseDescription>Kemco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>41</LicenseId>
+		<LicenseDescription>Seta Co.,Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>45</LicenseId>
+		<LicenseDescription>Visit Co.,Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>49</LicenseId>
+		<LicenseDescription>Carrozzeria</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>50</LicenseId>
+		<LicenseDescription>Dynamic</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>51</LicenseId>
+		<LicenseDescription>Nintendo</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>52</LicenseId>
+		<LicenseDescription>Magifact</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>53</LicenseId>
+		<LicenseDescription>Hect</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>60</LicenseId>
+		<LicenseDescription>Empire Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>61</LicenseId>
+		<LicenseDescription>Loriciel</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>64</LicenseId>
+		<LicenseDescription>Seika Corp.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>65</LicenseId>
+		<LicenseDescription>UBI Soft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>70</LicenseId>
+		<LicenseDescription>System 3</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>71</LicenseId>
+		<LicenseDescription>Spectrum Holobyte</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>73</LicenseId>
+		<LicenseDescription>Irem</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>75</LicenseId>
+		<LicenseDescription>Raya Systems/Sculptured Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>76</LicenseId>
+		<LicenseDescription>Renovation Products</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>77</LicenseId>
+		<LicenseDescription>Malibu Games/Black Pearl</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>79</LicenseId>
+		<LicenseDescription>U.S. Gold</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>80</LicenseId>
+		<LicenseDescription>Absolute Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>81</LicenseId>
+		<LicenseDescription>Acclaim</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>82</LicenseId>
+		<LicenseDescription>Activision</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>83</LicenseId>
+		<LicenseDescription>American Sammy</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>84</LicenseId>
+		<LicenseDescription>GameTek</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>85</LicenseId>
+		<LicenseDescription>Hi Tech Expressions</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>86</LicenseId>
+		<LicenseDescription>LJN Toys</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>90</LicenseId>
+		<LicenseDescription>Mindscape</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>93</LicenseId>
+		<LicenseDescription>Tradewest</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>95</LicenseId>
+		<LicenseDescription>American Softworks Corp.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>96</LicenseId>
+		<LicenseDescription>Titus</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>97</LicenseId>
+		<LicenseDescription>Virgin Interactive Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>98</LicenseId>
+		<LicenseDescription>Maxis</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>103</LicenseId>
+		<LicenseDescription>Ocean</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>105</LicenseId>
+		<LicenseDescription>Electronic Arts</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>107</LicenseId>
+		<LicenseDescription>Laser Beam</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>110</LicenseId>
+		<LicenseDescription>Elite</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>111</LicenseId>
+		<LicenseDescription>Electro Brain</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>112</LicenseId>
+		<LicenseDescription>Infogrames</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>113</LicenseId>
+		<LicenseDescription>Interplay</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>114</LicenseId>
+		<LicenseDescription>LucasArts</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>115</LicenseId>
+		<LicenseDescription>Parker Brothers</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>117</LicenseId>
+		<LicenseDescription>STORM</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>120</LicenseId>
+		<LicenseDescription>THQ Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>121</LicenseId>
+		<LicenseDescription>Accolade Inc.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>122</LicenseId>
+		<LicenseDescription>Triffix Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>124</LicenseId>
+		<LicenseDescription>Microprose</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>127</LicenseId>
+		<LicenseDescription>Kemco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>128</LicenseId>
+		<LicenseDescription>Misawa</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>129</LicenseId>
+		<LicenseDescription>Teichio</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>130</LicenseId>
+		<LicenseDescription>Namco Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>131</LicenseId>
+		<LicenseDescription>Lozc</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>132</LicenseId>
+		<LicenseDescription>Koei</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>134</LicenseId>
+		<LicenseDescription>Tokuma Shoten Intermedia</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>136</LicenseId>
+		<LicenseDescription>DATAM-Polystar</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>139</LicenseId>
+		<LicenseDescription>Bullet-Proof Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>140</LicenseId>
+		<LicenseDescription>Vic Tokai</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>142</LicenseId>
+		<LicenseDescription>Character Soft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>143</LicenseId>
+		<LicenseDescription>I&apos;&apos;Max</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>144</LicenseId>
+		<LicenseDescription>Takara</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>145</LicenseId>
+		<LicenseDescription>CHUN Soft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>146</LicenseId>
+		<LicenseDescription>Video System Co., Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>147</LicenseId>
+		<LicenseDescription>BEC</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>149</LicenseId>
+		<LicenseDescription>Varie</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>151</LicenseId>
+		<LicenseDescription>Kaneco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>153</LicenseId>
+		<LicenseDescription>Pack in Video</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>154</LicenseId>
+		<LicenseDescription>Nichibutsu</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>155</LicenseId>
+		<LicenseDescription>TECMO</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>156</LicenseId>
+		<LicenseDescription>Imagineer Co.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>160</LicenseId>
+		<LicenseDescription>Telenet</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>164</LicenseId>
+		<LicenseDescription>Konami</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>165</LicenseId>
+		<LicenseDescription>K.Amusement Leasing Co.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>167</LicenseId>
+		<LicenseDescription>Takara</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>169</LicenseId>
+		<LicenseDescription>Technos Jap.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>170</LicenseId>
+		<LicenseDescription>JVC</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>172</LicenseId>
+		<LicenseDescription>Toei Animation</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>173</LicenseId>
+		<LicenseDescription>Toho</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>175</LicenseId>
+		<LicenseDescription>Namco Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>177</LicenseId>
+		<LicenseDescription>ASCII Co. Activison</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>178</LicenseId>
+		<LicenseDescription>BanDai America</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>180</LicenseId>
+		<LicenseDescription>Enix</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>182</LicenseId>
+		<LicenseDescription>Halken</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>186</LicenseId>
+		<LicenseDescription>Culture Brain</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>187</LicenseId>
+		<LicenseDescription>Sunsoft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>188</LicenseId>
+		<LicenseDescription>Toshiba EMI</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>189</LicenseId>
+		<LicenseDescription>Sony Imagesoft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>191</LicenseId>
+		<LicenseDescription>Sammy</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>192</LicenseId>
+		<LicenseDescription>Taito</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>194</LicenseId>
+		<LicenseDescription>Kemco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>195</LicenseId>
+		<LicenseDescription>Square</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>196</LicenseId>
+		<LicenseDescription>Tokuma Soft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>197</LicenseId>
+		<LicenseDescription>Data East</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>198</LicenseId>
+		<LicenseDescription>Tonkin House</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>200</LicenseId>
+		<LicenseDescription>KOEI</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>202</LicenseId>
+		<LicenseDescription>Konami USA</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>203</LicenseId>
+		<LicenseDescription>NTVIC</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>205</LicenseId>
+		<LicenseDescription>Meldac</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>206</LicenseId>
+		<LicenseDescription>Pony Canyon</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>207</LicenseId>
+		<LicenseDescription>Sotsu Agency/Sunrise</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>208</LicenseId>
+		<LicenseDescription>Disco/Taito</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>209</LicenseId>
+		<LicenseDescription>Sofel</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>210</LicenseId>
+		<LicenseDescription>Quest Corp.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>211</LicenseId>
+		<LicenseDescription>Sigma</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>214</LicenseId>
+		<LicenseDescription>Naxat</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>216</LicenseId>
+		<LicenseDescription>Capcom Co., Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>217</LicenseId>
+		<LicenseDescription>Banpresto</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>218</LicenseId>
+		<LicenseDescription>Tomy</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>219</LicenseId>
+		<LicenseDescription>Acclaim</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>221</LicenseId>
+		<LicenseDescription>NCS</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>222</LicenseId>
+		<LicenseDescription>Human Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>223</LicenseId>
+		<LicenseDescription>Altron</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>224</LicenseId>
+		<LicenseDescription>Jaleco</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>226</LicenseId>
+		<LicenseDescription>Yutaka</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>228</LicenseId>
+		<LicenseDescription>T&amp;ESoft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>229</LicenseId>
+		<LicenseDescription>EPOCH Co.,Ltd.</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>231</LicenseId>
+		<LicenseDescription>Athena</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>232</LicenseId>
+		<LicenseDescription>Asmik</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>233</LicenseId>
+		<LicenseDescription>Natsume</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>234</LicenseId>
+		<LicenseDescription>King Records</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>235</LicenseId>
+		<LicenseDescription>Atlus</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>236</LicenseId>
+		<LicenseDescription>Sony Music Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>238</LicenseId>
+		<LicenseDescription>IGS</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>241</LicenseId>
+		<LicenseDescription>Motown Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>242</LicenseId>
+		<LicenseDescription>Left Field Entertainment</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>243</LicenseId>
+		<LicenseDescription>Beam Software</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>244</LicenseId>
+		<LicenseDescription>Tec Magik</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>249</LicenseId>
+		<LicenseDescription>Cybersoft</LicenseDescription>
+	</License>
+	<License>
+		<LicenseId>255</LicenseId>
+		<LicenseDescription>Hudson Soft</LicenseDescription>
+	</License>
+	<Size>
+		<SizeId>0</SizeId>
+		<SizeDescription>No RAM</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>1</SizeId>
+		<SizeDescription>2 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>2</SizeId>
+		<SizeDescription>4 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>3</SizeId>
+		<SizeDescription>8 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>4</SizeId>
+		<SizeDescription>16 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>5</SizeId>
+		<SizeDescription>32 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>6</SizeId>
+		<SizeDescription>64 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>7</SizeId>
+		<SizeDescription>128 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>8</SizeId>
+		<SizeDescription>256 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>9</SizeId>
+		<SizeDescription>512 KB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>10</SizeId>
+		<SizeDescription>1 MB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>11</SizeId>
+		<SizeDescription>2 MB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>12</SizeId>
+		<SizeDescription>4 MB</SizeDescription>
+	</Size>
+	<Size>
+		<SizeId>13</SizeId>
+		<SizeDescription>8 MB</SizeDescription>
+	</Size>
+</ROMHeader>

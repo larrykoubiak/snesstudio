@@ -1,18 +1,44 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNESStudio", "SNESStudio\SNESStudio.csproj", "{C6330951-F9EB-4D9A-99ED-77577877A476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPU", "CPU\CPU.csproj", "{22404EF7-9A5F-444B-8841-6531A2B6FCBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROM", "ROM\ROM.csproj", "{46410D6D-234A-48DF-98CA-CD8783DE130C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x86.ActiveCfg = Debug|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x86.Build.0 = Debug|x86
+		{C6330951-F9EB-4D9A-99ED-77577877A476}.Release|Any CPU.ActiveCfg = Release|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Release|x86.ActiveCfg = Release|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Release|x86.Build.0 = Release|x86
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Debug|x86.Build.0 = Debug|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Release|x86.ActiveCfg = Release|Any CPU
+		{22404EF7-9A5F-444B-8841-6531A2B6FCBD}.Release|x86.Build.0 = Release|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Debug|x86.Build.0 = Debug|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Release|x86.ActiveCfg = Release|Any CPU
+		{46410D6D-234A-48DF-98CA-CD8783DE130C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

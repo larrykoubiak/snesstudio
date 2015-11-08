@@ -13,7 +13,8 @@ namespace SNESStudio
         Graphics,
         Palette,
         Map,
-        Binary
+        Binary,
+        ROM
     }
     public class SNESFile
     {
@@ -22,6 +23,8 @@ namespace SNESStudio
         private SNESFileType type;
         [NonSerialized]
         private bool hasChanged;
+        [NonSerialized]
+        private byte[] data;
         public SNESFile()
         {
             filename = "newfile.asm";
