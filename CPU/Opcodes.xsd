@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dataroot" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="dataroot" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Opcode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OpcodeId" type="xs:int"/>
+              <xs:element name="Instruction65816" type="xs:int"/>
+              <xs:element name="AddressingModeId" type="xs:int"/>
+              <xs:element name="Instruction6502" type="xs:int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AddressingMode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AddressingModeId" type="xs:int"/>
+              <xs:element name="AddressingModeConstant" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressingModeDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressingModeFormat8bit" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressingModeFormat16bit" type="xs:string" minOccurs="0" />
+              <xs:element name="InputLength8Bit" type="xs:int" />
+              <xs:element name="InputLength16Bit" type="xs:int" />
+              <xs:element name="Addressing" type="xs:string" minOccurs="0" />
+              <xs:element name="Indirection" type="xs:string" minOccurs="0" />
+              <xs:element name="Indexed" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Instruction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InstructionId" type="xs:int" />
+              <xs:element name="InstructionConstant" type="xs:string" minOccurs="0" />
+              <xs:element name="InstructionName" type="xs:string" minOccurs="0" />
+              <xs:element name="InstructionDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="InstructionFlags" type="xs:int" />
+              <xs:element name="Instruction_M" type="xs:int" />
+              <xs:element name="Instruction_X" type="xs:int" />
+              <xs:element name="InstructionBranch" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+
+	</xs:element>
+</xs:schema>

@@ -14,12 +14,25 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+<<<<<<< HEAD
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
+<<<<<<< HEAD
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+=======
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -37,9 +50,24 @@
   <PropertyGroup>
     <ApplicationIcon>snes.ico</ApplicationIcon>
   </PropertyGroup>
+<<<<<<< HEAD
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ScintillaNET">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.5.4\lib\net40\ScintillaNET.dll</HintPath>
+=======
   <ItemGroup>
     <Reference Include="ScintillaNET">
       <HintPath>.\ScintillaNET.dll</HintPath>
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -96,6 +124,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+<<<<<<< HEAD
+    <None Include="packages.config" />
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,6 +143,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+<<<<<<< HEAD
+=======
     <Content Include="SciLexer.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -121,15 +155,28 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Plugins\ScintillaNET.xml" />
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
     <Content Include="snes.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CPU\CPU.csproj">
+<<<<<<< HEAD
+      <Project>{22404EF7-9A5F-444B-8841-6531A2B6FCBD}</Project>
+      <Name>CPU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Machine\Machine.csproj">
+      <Project>{1A67D27E-68A0-4D37-812D-6D72FD26F547}</Project>
+      <Name>Machine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROM\ROM.csproj">
+      <Project>{46410D6D-234A-48DF-98CA-CD8783DE130C}</Project>
+=======
       <Project>{22404ef7-9a5f-444b-8841-6531a2b6fcbd}</Project>
       <Name>CPU</Name>
     </ProjectReference>
     <ProjectReference Include="..\ROM\ROM.csproj">
       <Project>{46410d6d-234a-48df-98ca-cd8783de130c}</Project>
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
       <Name>ROM</Name>
     </ProjectReference>
   </ItemGroup>

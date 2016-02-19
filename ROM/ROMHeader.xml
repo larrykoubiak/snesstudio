@@ -76,6 +76,10 @@
 		<ChipsetId>229</ChipsetId>
 		<ChipsetDescription>ROM+Satellaview</ChipsetDescription>
 	</Chipset>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
 	<Country>
 		<CountryId>0</CountryId>
 		<CountryDescription>Japan</CountryDescription>
@@ -181,6 +185,10 @@
 		<CountryDescription>Other variation</CountryDescription>
 		<CountryVideoMode>Unknown</CountryVideoMode>
 	</Country>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
 	<License>
 		<LicenseId>0</LicenseId>
 	</License>
@@ -800,6 +808,10 @@
 		<LicenseId>255</LicenseId>
 		<LicenseDescription>Hudson Soft</LicenseDescription>
 	</License>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
 	<Size>
 		<SizeId>0</SizeId>
 		<SizeDescription>No RAM</SizeDescription>
@@ -856,4 +868,8 @@
 		<SizeId>13</SizeId>
 		<SizeDescription>8 MB</SizeDescription>
 	</Size>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9e5bb24e7c7465ad3fbc7de7fd71d8a195a1c8b7
 </ROMHeader>
