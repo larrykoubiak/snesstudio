@@ -57,7 +57,8 @@ namespace Machine {
     	public string Step() {
     		byte opcode = mMU.ReadByte(cPU.PC);
     		AddressingMode am = cPU.GetAddressingMode(opcode);			
-    		return CPU.GetOpcodeName(opcode);
+    		Instruction ins = CPU.GetOpcodeInstruction(opcode);
+    		return ins.Name;
     	}
 	}
 }
