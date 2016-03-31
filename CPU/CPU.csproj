@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -80,10 +79,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressingMode.cs" />
-    <Compile Include="Instruction.cs" />
-    <Compile Include="Memory.cs" />
-    <Compile Include="Opcode.cs" />
+    <Compile Include="Data Classes\AddressingMode.cs" />
+    <Compile Include="Data Classes\Instruction.cs" />
+    <Compile Include="Data Classes\Opcode.cs" />
+    <Compile Include="Data Classes\StatusRegister.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Ricoh5A22.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +91,19 @@
     <None Include="Opcodes.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonTypes\CommonTypes.csproj">
+      <Project>{32BEFB85-D71A-4B6F-93FF-63427193CA0F}</Project>
+      <Name>CommonTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMIO\MMIO.csproj">
+      <Project>{7700975C-C211-4845-994C-462EE26A1760}</Project>
+      <Name>MMIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data Classes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

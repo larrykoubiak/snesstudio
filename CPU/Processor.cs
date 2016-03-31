@@ -57,5 +57,15 @@ namespace CPU
 				Opcodes.Add(opcode);
 			}
 		}
+		public string GetKeywords()
+		{
+			string strKeywords = "";
+			foreach(Instruction ins in Instructions)
+			{
+				if(strKeywords.Length >0) strKeywords += " ";
+				strKeywords += ins.Name;
+			}
+			return strKeywords;
+		}
 	}
 }

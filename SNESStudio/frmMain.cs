@@ -12,7 +12,7 @@ using ScintillaNET;
 using Machine; 
 namespace SNESStudio {
     public partial class frmMain : Form {
-        #region Members
+		#region Members
         private SNESProject project;
         private SNES snes;
         private SNESFile currentFile;
@@ -142,28 +142,20 @@ namespace SNESStudio {
                             TabPage tp = new TabPage();
                             tp.Name = clickednode.Name;
                             tp.Text = currentFile.FileName;
-                            Scintilla sc = new Scintilla();
-                            sc.Lexer = Lexer.Cpp;
-                            sc.LexerLanguage = "Cpp";
-                            sc.Location = new Point(0, 0);
-                            sc.Dock = DockStyle.Fill;
-                            sc.Margins[0].Width = 20;
-                            tp.Controls.Add(sc);
+                            tp.Controls.Add(CreateCPUCodeScintilla());
                             tbFiles.TabPages.Add(tp);
-                        }
+                            tp.Controls[0].Text = File.ReadAllText(currentFile.FileName);
+            			}
                         break;
                     case SNESFileType.ROM:
                         if (!tbFiles.TabPages.ContainsKey(clickednode.Name)) {
                             TabPage tp = new TabPage();
                             tp.Name = clickednode.Name;
-                            tp.Text = currentFile.FileName;
-                            Scintilla sc = new Scintilla();
-                            sc.Lexer = Lexer.Cpp;
-                            sc.Location = new Point(0,0);
-                            sc.Dock = DockStyle.Fill;
-                            sc.Margins[0].Width = 20;
-                            tp.Controls.Add(sc);
+                            tp.Text = currentFile.FileName;							
+                            tp.Controls.Add(CreateCPUCodeScintilla());
                             tbFiles.TabPages.Add(tp);
+                            ((Scintilla)tp.Controls[0]).AddText(snes.CPU.ReadOpcode());
+                            btnStep.Enabled = true;
                         }
                         break;
                     default:
@@ -175,6 +167,15 @@ namespace SNESStudio {
         private void propertyGrid1_PropertyValueChanged(object s, PropertyValueChangedEventArgs e) {
             RefreshProject();
         }
+        
+		void BtnStepClick(object sender, EventArgs e)
+		{
+			snes.CPU.ExecuteCurrentOpcode();
+			Scintilla sc = (Scintilla)tbFiles.SelectedTab.Controls[0];
+			sc.AddText(Environment.NewLine + snes.CPU.ReadOpcode());
+			sc.ScrollCaret();
+			RefreshCPU();
+		}
         #endregion
 
         #region Methods
@@ -226,10 +227,31 @@ namespace SNESStudio {
             chkZ.Checked = snes.CPU.P.Z;
             chkC.Checked = snes.CPU.P.C;
         }
-		void BtnStepClick(object sender, EventArgs e)
-		{
-			((Scintilla)tbFiles.SelectedTab.Controls[0]).Text += snes.Step();
-		}
+        
+        private Scintilla CreateCPUCodeScintilla()
+        {
+            Scintilla sc = new Scintilla();
+            sc.Location = new Point(0,0);
+            sc.Dock = DockStyle.Fill;
+            sc.Margins[0].Width = 20;
+            sc.CaretForeColor = Color.White;
+            sc.StyleResetDefault();
+            sc.Styles[Style.Default].Font = "Consolas";
+            sc.Styles[Style.Default].Size = 10;
+            sc.Styles[Style.Default].BackColor = Color.FromArgb(41, 49, 52);
+            sc.StyleClearAll();
+            sc.Lexer = Lexer.Cpp;
+            sc.Styles[Style.Cpp.Word].ForeColor = Color.FromArgb(147, 199, 99);
+            sc.Styles[Style.Cpp.Word].Bold = true;
+            sc.Styles[Style.Cpp.Identifier].ForeColor = Color.FromArgb(255, 255, 255);
+            sc.Styles[Style.Cpp.Character].ForeColor = Color.FromArgb(236, 118, 0);
+            sc.Styles[Style.Cpp.Number].ForeColor = Color.FromArgb(255, 205, 34);
+            sc.Styles[Style.Cpp.Operator].ForeColor = Color.FromArgb(232, 226, 183);
+            sc.Styles[Style.Cpp.Comment].ForeColor = Color.FromArgb(102, 116, 123);
+            //CPU Instructions				            
+            sc.SetKeywords(0,snes.CPU.GetKeywords());
+            return sc;
+        }
         #endregion
     }
 }

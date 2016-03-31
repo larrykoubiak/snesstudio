@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 using ROM;
-using CPU;
+using CommonTypes;
 
 namespace MMIO {
 	/// <summary>
@@ -70,23 +70,23 @@ namespace MMIO {
 			oAM = new byte[0x220];
 		}
 		public byte ReadByte(uint loc) {
-			address.value = loc;
+			address.uint24_value = loc;
 			switch(address.b) {
 				case 0x7E:
 				case 0x7F:
-					return wRAM[address.lvalue];
+					return wRAM[address.uint16_value];
 				default:
 					switch(layout) {
 						case LayoutType.HIROM:
 							if((address.b>=0x40 && address.b<=0x7D) || (address.b >=0xC0 && address.b <=0xFF)) {
-						   		return rom[address.value & 0x3FFFFF];
+						   		return rom[address.uint24_value & 0x3FFFFF];
 						    }
 							else {
 								if(address.h >=0x80)
-									return rom[address.value & 0x3FFFFF];
+									return rom[address.uint24_value & 0x3FFFFF];
 								else {
 									if(address.h >=0x00 && address.h <= 0x1F) {
-										return wRAM[address.lvalue];
+										return wRAM[address.uint16_value];
 									}
 									else {
 										return 0;
@@ -97,12 +97,12 @@ namespace MMIO {
 							if(address.h >= 0x80) {
 								address.b &= 0x7F;
 								address.b /=2;
-								address.lvalue &=0x7FFF;
-								return rom[address.value];
+								address.uint16_value &=0x7FFF;
+								return rom[address.uint24_value];
 							}
 							else {
 								if(address.h >=0x00 && address.h <=0x1F) {
-									return wRAM[address.lvalue];
+									return wRAM[address.uint16_value];
 								}
 								else {
 									return 0;
@@ -120,6 +120,15 @@ namespace MMIO {
 			{
 				buf[idx] = ReadByte(loc+idx);				
 			}
+			return buf;
+		}
+		public reg24 Read24(uint loc,byte length)
+		{
+			byte idx = 0;
+			reg24 buf = new reg24();
+			if(length>0) buf.uint8_value = ReadByte(loc+idx++);
+			if(length>1) buf.h = ReadByte(loc+idx++);
+			if(length>2) buf.b = ReadByte(loc+idx++);
 			return buf;
 		}
 	}

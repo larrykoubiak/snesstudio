@@ -18,47 +18,42 @@ namespace Machine {
 	/// Description of MyClass.
 	/// </summary>
 	public class SNES {
-    	Ricoh5A22 cPU;
-    	MMU mMU;
-    	ROMImage rOM;
-    	
-    	public ROMImage ROM {
-    		get { return rOM; }
-    		set { 
-    			rOM = value;
-    			Reset();
-    		}
+		private ROMImage _rom;
+		public ROMImage ROM 
+		{ 
+			get 
+			{
+				return _rom;
+			}
+			set 
+			{
+				_rom = value;
+				Reset();
+			}
+		}
+
+		
+		public Ricoh5A22 CPU { get; set;}
+
+		public SNES() : this(null) {
     	}
-    	public MMU MMU {
-    		get { return mMU; }
-    		set { mMU = value; }
-    	}
-    	public Ricoh5A22 CPU {
-    		get { return cPU; }
-    		set { cPU = value; }
-    	}
-    	public SNES() : this(null) {    		
-    	}
-    	public SNES(string romfilepath) {
-    		cPU = new Ricoh5A22();
-    		mMU = new MMU();
-    		if(romfilepath==null || !File.Exists(romfilepath)) {
-    			rOM = null;    			
+		
+    	public SNES(string ROMfilepath) {
+    		CPU = new Ricoh5A22();
+    		if(ROMfilepath==null || !File.Exists(ROMfilepath)) {
+    			ROM = null;    			
     		}
     		else {
-    			rOM = new ROMImage(romfilepath);
-    			mMU.ROM = rOM;
+    			ROM = new ROMImage(ROMfilepath);
+    			CPU.MMU.ROM = ROM;
     			Reset();
     		}
     	}
         public void Reset() {
-        	cPU.PC = ROM.ResetVector;
+        	CPU.PC = ROM.ResetVector;
         }
-    	public string Step() {
-    		byte opcode = mMU.ReadByte(cPU.PC);
-    		AddressingMode am = cPU.GetAddressingMode(opcode);			
-    		Instruction ins = CPU.GetOpcodeInstruction(opcode);
-    		return ins.Name;
+    	public void Step() {
+			CPU.ExecuteCurrentOpcode();
     	}
 	}
 }

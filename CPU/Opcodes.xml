@@ -17,8 +17,8 @@
 			<Id>1</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE</Constant>
 			<Description>Absolute</Description>
-			<Format8Bit>OPC !$%2%1</Format8Bit>
-			<Format16Bit>OPC !$%2%1</Format16Bit>
+			<Format8Bit>{0} !${1:X4}</Format8Bit>
+			<Format16Bit>{0} !${1:X4}</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -29,8 +29,8 @@
 			<Id>2</Id>
 			<Constant>ADDRESSING_MODE_ACCUMULATOR</Constant>
 			<Description>Accumulator</Description>
-			<Format8Bit>OPC A</Format8Bit>
-			<Format16Bit>OPC A</Format16Bit>
+			<Format8Bit>{0} A</Format8Bit>
+			<Format16Bit>{0} A</Format16Bit>
 			<InputLength8Bit>0</InputLength8Bit>
 			<InputLength16Bit>0</InputLength16Bit>
 			<Addressing>Implied</Addressing>
@@ -41,8 +41,8 @@
 			<Id>3</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_X</Constant>
 			<Description>Absolute Indexed,X</Description>
-			<Format8Bit>OPC !$%2%1, X</Format8Bit>
-			<Format16Bit>OPC !$%2%1, X</Format16Bit>
+			<Format8Bit>{0} !${1:X4}, X</Format8Bit>
+			<Format16Bit>{0} !${1:X4}, X</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -53,8 +53,8 @@
 			<Id>4</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_Y</Constant>
 			<Description>Absolute Indexed,Y</Description>
-			<Format8Bit>OPC !$%2%1, Y</Format8Bit>
-			<Format16Bit>OPC !$%2%1, Y</Format16Bit>
+			<Format8Bit>{0} !${1:X4}, Y</Format8Bit>
+			<Format16Bit>{0} !${1:X4}, Y</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -65,8 +65,8 @@
 			<Id>5</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_LONG</Constant>
 			<Description>Absolute Long</Description>
-			<Format8Bit>OPC !$%3%2%1</Format8Bit>
-			<Format16Bit>OPC !$%3%2%1</Format16Bit>
+			<Format8Bit>{0} !${1:X6}</Format8Bit>
+			<Format16Bit>{0} !${1:X6}</Format16Bit>
 			<InputLength8Bit>3</InputLength8Bit>
 			<InputLength16Bit>3</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -77,8 +77,8 @@
 			<Id>6</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_LONG_INDEXED_X</Constant>
 			<Description>Absolute Long Indexed,X</Description>
-			<Format8Bit>OPC !$%3%2%1, X</Format8Bit>
-			<Format16Bit>OPC !$%3%2%1, X</Format16Bit>
+			<Format8Bit>{0} !${1:X6}, X</Format8Bit>
+			<Format16Bit>{0} !${1:X6}, X</Format16Bit>
 			<InputLength8Bit>3</InputLength8Bit>
 			<InputLength16Bit>3</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -89,8 +89,8 @@
 			<Id>7</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDIRECT</Constant>
 			<Description>Absolute Indirect</Description>
-			<Format8Bit>OPC (!$%2%1)</Format8Bit>
-			<Format16Bit>OPC (!$%2%1)</Format16Bit>
+			<Format8Bit>{0} (!${1:X4})</Format8Bit>
+			<Format16Bit>{0} (!${1:X4})</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -101,8 +101,8 @@
 			<Id>8</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDIRECT_LONG</Constant>
 			<Description>Absolute Indirect Long</Description>
-			<Format8Bit>OPC [!$%2%1]</Format8Bit>
-			<Format16Bit>OPC [!$%2%1]</Format16Bit>
+			<Format8Bit>{0} [!${1:X4}]</Format8Bit>
+			<Format16Bit>{0} [!${1:X4}]</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -113,8 +113,8 @@
 			<Id>9</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_INDIRECT_X</Constant>
 			<Description>Absolute Indexed Indirect</Description>
-			<Format8Bit>OPC (!$%2%1, X)</Format8Bit>
-			<Format16Bit>OPC (!$%2%1, X)</Format16Bit>
+			<Format8Bit>{0} (!${1:X4}, X)</Format8Bit>
+			<Format16Bit>{0} (!${1:X4}, X)</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -125,8 +125,8 @@
 			<Id>10</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE</Constant>
 			<Description>Direct Page</Description>
-			<Format8Bit>OPC $%1</Format8Bit>
-			<Format16Bit>OPC $%1</Format16Bit>
+			<Format8Bit>{0} ${1:X2}</Format8Bit>
+			<Format16Bit>{0} ${1:X2}</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -137,8 +137,8 @@
 			<Id>11</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_X</Constant>
 			<Description>DP Indexed,X</Description>
-			<Format8Bit>OPC $%1, X</Format8Bit>
-			<Format16Bit>OPC $%1, X</Format16Bit>
+			<Format8Bit>{0} ${1:X2}, X</Format8Bit>
+			<Format16Bit>{0} ${1:X2}, X</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -149,8 +149,8 @@
 			<Id>12</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_Y</Constant>
 			<Description>DP Indexed,Y</Description>
-			<Format8Bit>OPC $%1, Y</Format8Bit>
-			<Format16Bit>OPC $%1, Y</Format16Bit>
+			<Format8Bit>{0} ${1:X2}, Y</Format8Bit>
+			<Format16Bit>{0} ${1:X2}, Y</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -161,8 +161,8 @@
 			<Id>13</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT</Constant>
 			<Description>DP Indirect</Description>
-			<Format8Bit>OPC ($%1)</Format8Bit>
-			<Format16Bit>OPC ($%1)</Format16Bit>
+			<Format8Bit>{0} (${1:X2})</Format8Bit>
+			<Format16Bit>{0} (${1:X2})</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -173,8 +173,8 @@
 			<Id>14</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_LONG</Constant>
 			<Description>DP Indirect Long</Description>
-			<Format8Bit>OPC [$%1]</Format8Bit>
-			<Format16Bit>OPC [$%1]</Format16Bit>
+			<Format8Bit>{0} [${1:X2}]</Format8Bit>
+			<Format16Bit>{0} [${1:X2}]</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -185,8 +185,8 @@
 			<Id>15</Id>
 			<Constant>ADDRESSING_MODE_STACK_RELATIVE_INDIRECT_INDEXED_Y</Constant>
 			<Description>SR Indirect Indexed,Y</Description>
-			<Format8Bit>OPC ($%1, S), Y</Format8Bit>
-			<Format16Bit>OPC ($%1, S), Y</Format16Bit>
+			<Format8Bit>{0} (${1:X2}, S), Y</Format8Bit>
+			<Format16Bit>{0} (${1:X2}, S), Y</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Stack</Addressing>
@@ -197,8 +197,8 @@
 			<Id>16</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_INDIRECT_X</Constant>
 			<Description>DP Indexed Indirect,X</Description>
-			<Format8Bit>OPC ($%1, X)</Format8Bit>
-			<Format16Bit>OPC ($%1, X)</Format16Bit>
+			<Format8Bit>{0} (${1:X2}, X)</Format8Bit>
+			<Format16Bit>{0} (${1:X2}, X)</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -209,8 +209,8 @@
 			<Id>17</Id>
 			<Constant>ADDRESSING_MODE_STACK_RELATIVE</Constant>
 			<Description>Stack Relative</Description>
-			<Format8Bit>OPC $%1, S</Format8Bit>
-			<Format16Bit>OPC $%1, S</Format16Bit>
+			<Format8Bit>{0} ${1:X2}, S</Format8Bit>
+			<Format16Bit>{0} ${1:X2}, S</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Stack</Addressing>
@@ -221,8 +221,8 @@
 			<Id>18</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_INDEXED_Y</Constant>
 			<Description>DP Indirect Indexed, Y</Description>
-			<Format8Bit>OPC ($%1), Y</Format8Bit>
-			<Format16Bit>OPC ($%1), Y</Format16Bit>
+			<Format8Bit>{0} (${1:X2}), Y</Format8Bit>
+			<Format16Bit>{0} (${1:X2}), Y</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -233,8 +233,8 @@
 			<Id>19</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_LONG_INDEXED_Y</Constant>
 			<Description>DP Indirect Long Indexed, Y</Description>
-			<Format8Bit>OPC [$%1], Y</Format8Bit>
-			<Format16Bit>OPC [$%1], Y</Format16Bit>
+			<Format8Bit>{0} [${1:X2}], Y</Format8Bit>
+			<Format16Bit>{0} [${1:X2}], Y</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -245,8 +245,8 @@
 			<Id>20</Id>
 			<Constant>ADDRESSING_MODE_IMPLIED</Constant>
 			<Description>Implied</Description>
-			<Format8Bit>OPC</Format8Bit>
-			<Format16Bit>OPC</Format16Bit>
+			<Format8Bit>{0}</Format8Bit>
+			<Format16Bit>{0}</Format16Bit>
 			<InputLength8Bit>0</InputLength8Bit>
 			<InputLength16Bit>0</InputLength16Bit>
 			<Addressing>Implied</Addressing>
@@ -257,8 +257,8 @@
 			<Id>21</Id>
 			<Constant>ADDRESSING_MODE_PROGRAM_COUNTER_RELATIVE</Constant>
 			<Description>Program Counter Relative</Description>
-			<Format8Bit>OPC $%1</Format8Bit>
-			<Format16Bit>OPC $%1</Format16Bit>
+			<Format8Bit>{0} ${1:X2}</Format8Bit>
+			<Format16Bit>{0} ${1:X2}</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Program Counter</Addressing>
@@ -269,8 +269,8 @@
 			<Id>22</Id>
 			<Constant>ADDRESSING_MODE_PROGRAM_COUNTER_RELATIVE_LONG</Constant>
 			<Description>Program Counter Relative Long</Description>
-			<Format8Bit>OPC $%2%1</Format8Bit>
-			<Format16Bit>OPC $%2%1</Format16Bit>
+			<Format8Bit>{0} ${1:X4}</Format8Bit>
+			<Format16Bit>{0} ${1:X4}</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Program Counter</Addressing>
@@ -281,8 +281,8 @@
 			<Id>23</Id>
 			<Constant>ADDRESSING_MODE_STACK</Constant>
 			<Description>Stack</Description>
-			<Format8Bit>OPC</Format8Bit>
-			<Format16Bit>OPC</Format16Bit>
+			<Format8Bit>{0}</Format8Bit>
+			<Format16Bit>{0}</Format16Bit>
 			<InputLength8Bit>0</InputLength8Bit>
 			<InputLength16Bit>0</InputLength16Bit>
 			<Addressing>Implied</Addressing>
@@ -293,8 +293,8 @@
 			<Id>24</Id>
 			<Constant>ADDRESSING_MODE_STACK_ABSOLUTE</Constant>
 			<Description>Stack (Absolute)</Description>
-			<Format8Bit>OPC !$%2%1</Format8Bit>
-			<Format16Bit>OPC !$%2%1</Format16Bit>
+			<Format8Bit>{0} !${1:X4}</Format8Bit>
+			<Format16Bit>{0} !${1:X4}</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Absolute</Addressing>
@@ -305,8 +305,8 @@
 			<Id>25</Id>
 			<Constant>ADDRESSING_MODE_STACK_DIRECT_PAGE_INDIRECT</Constant>
 			<Description>Stack (DP Indirect)</Description>
-			<Format8Bit>OPC ($%1)</Format8Bit>
-			<Format16Bit>OPC ($%1)</Format16Bit>
+			<Format8Bit>{0} (${1:X2})</Format8Bit>
+			<Format16Bit>{0} (${1:X2})</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Direct Page</Addressing>
@@ -317,8 +317,8 @@
 			<Id>26</Id>
 			<Constant>ADDRESSING_MODE_STACK_PROGRAM_COUNTER_RELATIVE</Constant>
 			<Description>Stack (PC Relative Long)</Description>
-			<Format8Bit>OPC $%2%1</Format8Bit>
-			<Format16Bit>OPC $%2%1</Format16Bit>
+			<Format8Bit>{0} ${1:X4}</Format8Bit>
+			<Format16Bit>{0} ${1:X4}</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Program Counter</Addressing>
@@ -329,8 +329,8 @@
 			<Id>27</Id>
 			<Constant>ADDRESSING_MODE_STACK_INTERRUPT</Constant>
 			<Description>Stack/Interrupt</Description>
-			<Format8Bit>OPC</Format8Bit>
-			<Format16Bit>OPC</Format16Bit>
+			<Format8Bit>{0}</Format8Bit>
+			<Format16Bit>{0}</Format16Bit>
 			<InputLength8Bit>0</InputLength8Bit>
 			<InputLength16Bit>0</InputLength16Bit>
 			<Addressing>Implied</Addressing>
@@ -341,8 +341,8 @@
 			<Id>28</Id>
 			<Constant>ADDRESSING_MODE_BLOCK_MOVE</Constant>
 			<Description>Block Move</Description>
-			<Format8Bit>OPC $%1,$%2</Format8Bit>
-			<Format16Bit>OPC $%1,$%2</Format16Bit>
+			<Format8Bit>{0} ${1:X2},${2:X2}</Format8Bit>
+			<Format16Bit>{0} ${1:X2},${2:X2}</Format16Bit>
 			<InputLength8Bit>2</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Block</Addressing>
@@ -353,8 +353,8 @@
 			<Id>29</Id>
 			<Constant>ADDRESSING_MODE_IMMEDIATE</Constant>
 			<Description>Immediate</Description>
-			<Format8Bit>OPC #$%1</Format8Bit>
-			<Format16Bit>OPC #$%2%1</Format16Bit>
+			<Format8Bit>{0} #${1:X2}</Format8Bit>
+			<Format16Bit>{0} #${1:X4}</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>2</InputLength16Bit>
 			<Addressing>Immediate</Addressing>
@@ -365,8 +365,8 @@
 			<Id>30</Id>
 			<Constant>ADDRESSING_MODE_IMMEDIATE_STATUS</Constant>
 			<Description>Immediate (Status)</Description>
-			<Format8Bit>OPC #$%1</Format8Bit>
-			<Format16Bit>OPC #$%1</Format16Bit>
+			<Format8Bit>{0} #${1:X2}</Format8Bit>
+			<Format16Bit>{0} #${1:X2}</Format16Bit>
 			<InputLength8Bit>1</InputLength8Bit>
 			<InputLength16Bit>1</InputLength16Bit>
 			<Addressing>Immediate</Addressing>
@@ -375,916 +375,6 @@
 		</AddressingMode>
 	</AddressingModes>
 	<Instructions>
-		<Instruction>
-			<Id>0</Id>
-			<Constant>INSTRUCTION_ERR</Constant>
-			<Name>ERR</Name>
-			<Description>Opcode Not Implemented</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>1</Id>
-			<Constant>INSTRUCTION_ADC</Constant>
-			<Name>ADC</Name>
-			<Description>Add With Carry</Description>
-			<Flags>195</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>2</Id>
-			<Constant>INSTRUCTION_AND</Constant>
-			<Name>AND</Name>
-			<Description>AND Accumulator With Memory</Description>
-			<Flags>130</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>3</Id>
-			<Constant>INSTRUCTION_ASL</Constant>
-			<Name>ASL</Name>
-			<Description>Accumulator or Memory Shift Left</Description>
-			<Flags>131</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>4</Id>
-			<Constant>INSTRUCTION_BCC</Constant>
-			<Name>BCC</Name>
-			<Description>Branch if Carry Clear</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>5</Id>
-			<Constant>INSTRUCTION_BCS</Constant>
-			<Name>BCS</Name>
-			<Description>Branch if Carry Set</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>6</Id>
-			<Constant>INSTRUCTION_BEQ</Constant>
-			<Name>BEQ</Name>
-			<Description>Branch if Equal</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>7</Id>
-			<Constant>INSTRUCTION_BIT</Constant>
-			<Name>BIT</Name>
-			<Description>Test Bits</Description>
-			<Flags>194</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>8</Id>
-			<Constant>INSTRUCTION_BMI</Constant>
-			<Name>BMI</Name>
-			<Description>Branch if Minus</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>9</Id>
-			<Constant>INSTRUCTION_BNE</Constant>
-			<Name>BNE</Name>
-			<Description>Branch if Not Equal</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>10</Id>
-			<Constant>INSTRUCTION_BPL</Constant>
-			<Name>BPL</Name>
-			<Description>Branch if Plus</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>11</Id>
-			<Constant>INSTRUCTION_BRA</Constant>
-			<Name>BRA</Name>
-			<Description>Branch Always</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>12</Id>
-			<Constant>INSTRUCTION_BRK</Constant>
-			<Name>BRK</Name>
-			<Description>Break</Description>
-			<Flags>12</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>13</Id>
-			<Constant>INSTRUCTION_BRL</Constant>
-			<Name>BRL</Name>
-			<Description>Branch Long Always</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>14</Id>
-			<Constant>INSTRUCTION_BVC</Constant>
-			<Name>BVC</Name>
-			<Description>Branch if Overflow Clear</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>15</Id>
-			<Constant>INSTRUCTION_BVS</Constant>
-			<Name>BVS</Name>
-			<Description>Branch if Overflow Set</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>16</Id>
-			<Constant>INSTRUCTION_CLC</Constant>
-			<Name>CLC</Name>
-			<Description>Clear Carry</Description>
-			<Flags>1</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>17</Id>
-			<Constant>INSTRUCTION_CLD</Constant>
-			<Name>CLD</Name>
-			<Description>Clear Decimal Mode Flag</Description>
-			<Flags>8</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>18</Id>
-			<Constant>INSTRUCTION_CLI</Constant>
-			<Name>CLI</Name>
-			<Description>Clear Interrupt Disable Flag</Description>
-			<Flags>4</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>19</Id>
-			<Constant>INSTRUCTION_CLV</Constant>
-			<Name>CLV</Name>
-			<Description>Clear Overflow Flag</Description>
-			<Flags>64</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>20</Id>
-			<Constant>INSTRUCTION_CMP</Constant>
-			<Name>CMP</Name>
-			<Description>Compare Accumulator With Memory</Description>
-			<Flags>131</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>21</Id>
-			<Constant>INSTRUCTION_COP</Constant>
-			<Name>COP</Name>
-			<Description>Co-Processor Enable</Description>
-			<Flags>12</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>22</Id>
-			<Constant>INSTRUCTION_CPX</Constant>
-			<Name>CPX</Name>
-			<Description>Compare Index Register X with Memory</Description>
-			<Flags>131</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>23</Id>
-			<Constant>INSTRUCTION_CPY</Constant>
-			<Name>CPY</Name>
-			<Description>Compare Index Register Y with Memory</Description>
-			<Flags>131</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>24</Id>
-			<Constant>INSTRUCTION_DEC</Constant>
-			<Name>DEC</Name>
-			<Description>Decrement</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>25</Id>
-			<Constant>INSTRUCTION_DEX</Constant>
-			<Name>DEX</Name>
-			<Description>Decrement Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>26</Id>
-			<Constant>INSTRUCTION_DEY</Constant>
-			<Name>DEY</Name>
-			<Description>Decrement Index Register Y</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>27</Id>
-			<Constant>INSTRUCTION_EOR</Constant>
-			<Name>EOR</Name>
-			<Description>Exclusive-OR Accumulator with Memory</Description>
-			<Flags>130</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>28</Id>
-			<Constant>INSTRUCTION_INC</Constant>
-			<Name>INC</Name>
-			<Description>Increment</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>29</Id>
-			<Constant>INSTRUCTION_INX</Constant>
-			<Name>INX</Name>
-			<Description>Increment Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>30</Id>
-			<Constant>INSTRUCTION_INY</Constant>
-			<Name>INY</Name>
-			<Description>Increment Index Register Y</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>31</Id>
-			<Constant>INSTRUCTION_JMP</Constant>
-			<Name>JMP</Name>
-			<Description>Jump</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>32</Id>
-			<Constant>INSTRUCTION_JSR</Constant>
-			<Name>JSR</Name>
-			<Description>Jump to Subroutine</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>33</Id>
-			<Constant>INSTRUCTION_LDA</Constant>
-			<Name>LDA</Name>
-			<Description>Load Accumulator from Memory</Description>
-			<Flags>130</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>34</Id>
-			<Constant>INSTRUCTION_LDX</Constant>
-			<Name>LDX</Name>
-			<Description>Load Index Register X from Memory</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>35</Id>
-			<Constant>INSTRUCTION_LDY</Constant>
-			<Name>LDY</Name>
-			<Description>Load Index Register Y from Memory</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>36</Id>
-			<Constant>INSTRUCTION_LSR</Constant>
-			<Name>LSR</Name>
-			<Description>Logical Shift Memory or Accumulator Right</Description>
-			<Flags>131</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>37</Id>
-			<Constant>INSTRUCTION_MVN</Constant>
-			<Name>MVN</Name>
-			<Description>Block Move Negative</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>38</Id>
-			<Constant>INSTRUCTION_MVP</Constant>
-			<Name>MVP</Name>
-			<Description>Block Move Positive</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>39</Id>
-			<Constant>INSTRUCTION_NOP</Constant>
-			<Name>NOP</Name>
-			<Description>No Operation</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>40</Id>
-			<Constant>INSTRUCTION_ORA</Constant>
-			<Name>ORA</Name>
-			<Description>OR Accumulator with Memory</Description>
-			<Flags>130</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>41</Id>
-			<Constant>INSTRUCTION_PEA</Constant>
-			<Name>PEA</Name>
-			<Description>Push Effective Absolute Address</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>42</Id>
-			<Constant>INSTRUCTION_PEI</Constant>
-			<Name>PEI</Name>
-			<Description>Push Effective Indirect Address</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>43</Id>
-			<Constant>INSTRUCTION_PER</Constant>
-			<Name>PER</Name>
-			<Description>Push Effective PC Relative Indirect Address</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>44</Id>
-			<Constant>INSTRUCTION_PHA</Constant>
-			<Name>PHA</Name>
-			<Description>Push Accumulator</Description>
-			<Flags>0</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>45</Id>
-			<Constant>INSTRUCTION_PHB</Constant>
-			<Name>PHB</Name>
-			<Description>Push Data Bank Register</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>46</Id>
-			<Constant>INSTRUCTION_PHD</Constant>
-			<Name>PHD</Name>
-			<Description>Push Direct Page Register</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>47</Id>
-			<Constant>INSTRUCTION_PHK</Constant>
-			<Name>PHK</Name>
-			<Description>Push Program Bank Register</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>48</Id>
-			<Constant>INSTRUCTION_PHP</Constant>
-			<Name>PHP</Name>
-			<Description>Push Processor Status Register</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>49</Id>
-			<Constant>INSTRUCTION_PHX</Constant>
-			<Name>PHX</Name>
-			<Description>Push Index Register X</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>50</Id>
-			<Constant>INSTRUCTION_PHY</Constant>
-			<Name>PHY</Name>
-			<Description>Push Index Register Y</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>51</Id>
-			<Constant>INSTRUCTION_PLA</Constant>
-			<Name>PLA</Name>
-			<Description>Pull Accumulator</Description>
-			<Flags>130</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>52</Id>
-			<Constant>INSTRUCTION_PLB</Constant>
-			<Name>PLB</Name>
-			<Description>Pull Data Bank Register</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>53</Id>
-			<Constant>INSTRUCTION_PLD</Constant>
-			<Name>PLD</Name>
-			<Description>Pull Direct Page Register</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>54</Id>
-			<Constant>INSTRUCTION_PLP</Constant>
-			<Name>PLP</Name>
-			<Description>Pull Processor Status Register</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>55</Id>
-			<Constant>INSTRUCTION_PLX</Constant>
-			<Name>PLX</Name>
-			<Description>Pull Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>56</Id>
-			<Constant>INSTRUCTION_PLY</Constant>
-			<Name>PLY</Name>
-			<Description>Pull Index Register Y</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>57</Id>
-			<Constant>INSTRUCTION_REP</Constant>
-			<Name>REP</Name>
-			<Description>Reset Processor Status Bits</Description>
-			<Flags>255</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>58</Id>
-			<Constant>INSTRUCTION_ROL</Constant>
-			<Name>ROL</Name>
-			<Description>Rotate Memory or Accumulator Left</Description>
-			<Flags>131</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>59</Id>
-			<Constant>INSTRUCTION_ROR</Constant>
-			<Name>ROR</Name>
-			<Description>Rotate Memory or Accumulator Right</Description>
-			<Flags>131</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>60</Id>
-			<Constant>INSTRUCTION_RTI</Constant>
-			<Name>RTI</Name>
-			<Description>Return from Interrupt</Description>
-			<Flags>255</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>61</Id>
-			<Constant>INSTRUCTION_RTL</Constant>
-			<Name>RTL</Name>
-			<Description>Return from Subroutine Long</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>62</Id>
-			<Constant>INSTRUCTION_RTS</Constant>
-			<Name>RTS</Name>
-			<Description>Return from Subroutine</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>1</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>63</Id>
-			<Constant>INSTRUCTION_SBC</Constant>
-			<Name>SBC</Name>
-			<Description>Subtract with Borrow from Accumulator</Description>
-			<Flags>195</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>64</Id>
-			<Constant>INSTRUCTION_SEC</Constant>
-			<Name>SEC</Name>
-			<Description>Set Carry Flag</Description>
-			<Flags>1</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>65</Id>
-			<Constant>INSTRUCTION_SED</Constant>
-			<Name>SED</Name>
-			<Description>Set Decimal Flag</Description>
-			<Flags>8</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>66</Id>
-			<Constant>INSTRUCTION_SEI</Constant>
-			<Name>SEI</Name>
-			<Description>Set Interrupt Disable Flag</Description>
-			<Flags>4</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>67</Id>
-			<Constant>INSTRUCTION_SEP</Constant>
-			<Name>SEP</Name>
-			<Description>Set Processor Status Bits</Description>
-			<Flags>255</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>68</Id>
-			<Constant>INSTRUCTION_STA</Constant>
-			<Name>STA</Name>
-			<Description>Store Accumulator to Memory</Description>
-			<Flags>0</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>69</Id>
-			<Constant>INSTRUCTION_STP</Constant>
-			<Name>STP</Name>
-			<Description>Stop Processor</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>70</Id>
-			<Constant>INSTRUCTION_STX</Constant>
-			<Name>STX</Name>
-			<Description>Store Index Register X to Memory</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>71</Id>
-			<Constant>INSTRUCTION_STY</Constant>
-			<Name>STY</Name>
-			<Description>Store Index Register Y to Memory</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>1</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>72</Id>
-			<Constant>INSTRUCTION_STZ</Constant>
-			<Name>STZ</Name>
-			<Description>Store Zero to Memory</Description>
-			<Flags>0</Flags>
-			<M>1</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>73</Id>
-			<Constant>INSTRUCTION_TAX</Constant>
-			<Name>TAX</Name>
-			<Description>Transfer Accumulator to Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>74</Id>
-			<Constant>INSTRUCTION_TAY</Constant>
-			<Name>TAY</Name>
-			<Description>Transfer Accumulator to Index Register Y</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>75</Id>
-			<Constant>INSTRUCTION_TCD</Constant>
-			<Name>TCD</Name>
-			<Description>Transfer 16-Bit Accumulator to Direct Page Register</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>76</Id>
-			<Constant>INSTRUCTION_TCS</Constant>
-			<Name>TCS</Name>
-			<Description>Transfer 16-Bit Accumulator to Stack Pointer</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>77</Id>
-			<Constant>INSTRUCTION_TDC</Constant>
-			<Name>TDC</Name>
-			<Description>Transfer Direct Page Register to 16-Bit Accumulator</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>78</Id>
-			<Constant>INSTRUCTION_TRB</Constant>
-			<Name>TRB</Name>
-			<Description>Test and Reset Memory Bits Against Accumulator</Description>
-			<Flags>2</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>79</Id>
-			<Constant>INSTRUCTION_TSB</Constant>
-			<Name>TSB</Name>
-			<Description>Test and Set Memory Bits Against Accumulator</Description>
-			<Flags>2</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>80</Id>
-			<Constant>INSTRUCTION_TSC</Constant>
-			<Name>TSC</Name>
-			<Description>Transfer Stack Pointer to 16-Bit Accumulator</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>81</Id>
-			<Constant>INSTRUCTION_TSX</Constant>
-			<Name>TSX</Name>
-			<Description>Transfer Stack Pointer to Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>82</Id>
-			<Constant>INSTRUCTION_TXA</Constant>
-			<Name>TXA</Name>
-			<Description>Transfer Index Register X to Accumulator</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>83</Id>
-			<Constant>INSTRUCTION_TXS</Constant>
-			<Name>TXS</Name>
-			<Description>Transfer Index Register X to Stack Pointer</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>84</Id>
-			<Constant>INSTRUCTION_TXY</Constant>
-			<Name>TXY</Name>
-			<Description>Transfer Index Register X to Index Register Y</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>85</Id>
-			<Constant>INSTRUCTION_TYA</Constant>
-			<Name>TYA</Name>
-			<Description>Transfer Index Register Y to Accumulator</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>86</Id>
-			<Constant>INSTRUCTION_TYX</Constant>
-			<Name>TYX</Name>
-			<Description>Transfer Index Register Y to Index Register X</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>87</Id>
-			<Constant>INSTRUCTION_WAI</Constant>
-			<Name>WAI</Name>
-			<Description>Wait for Interrupt</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>88</Id>
-			<Constant>INSTRUCTION_WDM</Constant>
-			<Name>WDM</Name>
-			<Description>Reserved for Future Expansion</Description>
-			<Flags>0</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>89</Id>
-			<Constant>INSTRUCTION_XBA</Constant>
-			<Name>XBA</Name>
-			<Description>Exchange B and A 8-Bit Accumulators</Description>
-			<Flags>130</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
-		<Instruction>
-			<Id>90</Id>
-			<Constant>INSTRUCTION_XCE</Constant>
-			<Name>XCE</Name>
-			<Description>Exchange Carry and Emulation Flags</Description>
-			<Flags>1</Flags>
-			<M>0</M>
-			<X>0</X>
-			<Branch>0</Branch>
-		</Instruction>
 		<Instruction>
 			<Id>0</Id>
 			<Constant>INSTRUCTION_ERR</Constant>
@@ -3706,7 +2796,7 @@
 		<Opcode>
 			<Id>251</Id>
 			<InstructionId65816>90</InstructionId65816>
-			<InstructionId6502>0</InstructionId6502>
+			<InstructionId6502>90</InstructionId6502>
 			<AddressingModeId>20</AddressingModeId>
 		</Opcode>
 		<Opcode>

@@ -657,6 +657,7 @@
         	// 
         	// btnStep
         	// 
+        	this.btnStep.Enabled = false;
         	this.btnStep.Location = new System.Drawing.Point(3, 3);
         	this.btnStep.Name = "btnStep";
         	this.btnStep.Size = new System.Drawing.Size(55, 23);
@@ -691,6 +692,7 @@
         	this.panel2.ResumeLayout(false);
         	this.ResumeLayout(false);
         	this.PerformLayout();
+
         }
 
         #endregion

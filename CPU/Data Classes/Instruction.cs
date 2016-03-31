@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Xml.Serialization;
 
 namespace CPU
 {
@@ -15,16 +16,26 @@ namespace CPU
 	/// </summary>
 	public class Instruction
 	{
+		private StatusRegister srFlags;
 		public byte Id {get;set;}
 		public string Constant {get;set;}
 		public String Name {get;set;}
 		public string Description {get;set;}
-		public byte Flags {get;set;}
+		public byte Flags 
+		{
+			get { return srFlags.Value;}
+			set { srFlags.Value = value;}
+		}
 		public bool M {get;set;}
 		public bool X {get;set;}
 		public bool Branch {get;set;}
+		[XmlIgnore]
+		public StatusRegister Registers {
+			get { return srFlags;}
+		}
 		public Instruction()
 		{
+			srFlags = new StatusRegister();
 		}
 	}
 }
