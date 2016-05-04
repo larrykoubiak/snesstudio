@@ -131,5 +131,7 @@ namespace MMIO {
 			if(length>2) buf.b = ReadByte(loc+idx++);
 			return buf;
 		}
+
+		
 	}
 }

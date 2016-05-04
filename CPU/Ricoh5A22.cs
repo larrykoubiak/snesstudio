@@ -132,6 +132,29 @@ namespace CPU {
     				MMU.WRAM[SP--] = pc.uint8_value;
     				PC = operand.uint16_value;
     				break;
+    			case "LDA":
+    				a.uint8_value = operand.uint8_value;
+    				if(!P.M) a.h = operand.h;
+    				break;
+    			case "LDX":
+    				x.uint8_value = operand.uint8_value;
+    				if(!P.X) x.h = operand.h;
+    				break;
+    			case "PHA":
+    				MMU.WRAM[SP--] = a.uint8_value;
+    				if(!P.M) MMU.WRAM[SP--] = a.h;
+    				break;    				
+    			case "PHX":
+    				MMU.WRAM[SP--] = x.uint8_value;
+    				if(!P.X) MMU.WRAM[SP--] = x.h;
+    				break;
+    			case "PLB":
+    				DB = MMU.WRAM[SP--];
+    				break;
+    			case "PLD":
+    				dp.h = MMU.WRAM[SP++];
+    				dp.uint8_value = MMU.WRAM[SP++];
+    				break;
     			case "REP":
     				P.Value &= (byte)(~operand.uint8_value);
     				break;
@@ -140,6 +163,20 @@ namespace CPU {
     				break;
     			case "SEP":
     				P.Value |= operand.uint8_value;
+    				break;
+    			case "TAX":
+    				x.uint8_value = a.uint8_value;
+    				if(!P.M) x.h = a.h;
+    				break;
+    			case "TAY":
+    				y.uint8_value = a.uint8_value;
+    				if(!P.M) y.h = a.h;
+    				break;    				
+    			case "TDC":
+    				C = DP;
+    				break;
+    			case "TXS":
+    				SP = X;
     				break;
     			case "XCE":
     				bool E2 = E;
