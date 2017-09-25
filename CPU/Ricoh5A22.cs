@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using System.Data;
 using MMIO;
 using CommonTypes;
+using System.Xml.Serialization;
 
 namespace CPU {
+	[Serializable()]
+	[XmlRoot("CPU")]
 	public class Ricoh5A22 : Processor {
 		
 		#region Members
@@ -17,19 +20,100 @@ namespace CPU {
         reg24 pc;
         reg16 sp;
         reg16 dp;
+		[XmlIgnore]
         public byte DB {get;set;}
+        [XmlIgnore]
         public StatusRegister P { get;set;}
+        [XmlIgnore]
         public bool E {get;set;}
+        [XmlIgnore]
         public MMU MMU {get;set;}
         private Opcode op;
         private reg24 operand;
         private Instruction ins;
         private byte opsize;
-        
         #endregion
 
         #region Constructor
-        public Ricoh5A22() {
+        public Ricoh5A22() : base() {
+        }        
+        #endregion
+
+        #region Properties
+        [XmlIgnore]
+        public byte A {
+            get { return a.uint8_value; }
+            set { a.uint8_value = value; }
+        }
+        [XmlIgnore]
+        public byte B {
+            get { return a.h; }
+            set { a.h = value; }
+        }
+        [XmlIgnore]
+        public ushort C {
+            get { return a.uint16_value; }
+            set { a.uint16_value = value; }
+        }
+        [XmlIgnore]
+        public byte XL {
+            get { return x.uint8_value; }
+            set { x.uint8_value = value; }
+        }
+        [XmlIgnore]
+        public byte XH {
+            get { return x.h; }
+            set { x.h = value; }
+        }
+        [XmlIgnore]
+        public ushort X {
+            get { return x.uint16_value; }
+            set { x.uint16_value = value; }
+        }
+        [XmlIgnore]
+        public byte YL {
+            get { return y.uint8_value; }
+            set { y.uint8_value = value; }
+        }
+        [XmlIgnore]
+        public byte YH {
+            get { return y.h; }
+            set { y.h = value; }
+        }
+        [XmlIgnore]
+        public ushort Y {
+            get { return y.uint16_value; }
+            set { y.uint16_value = value; }
+        }
+        [XmlIgnore]
+        public ushort PC {
+            get { return pc.uint16_value; }
+            set { pc.uint16_value = value; }
+        }
+        [XmlIgnore]
+        public byte PB {
+            get { return pc.b; }
+            set { pc.b = value; }
+        }
+        [XmlIgnore]
+        public uint PCL {
+            get { return pc.uint24_value; }
+            set { pc.uint24_value = value; }
+        }
+        [XmlIgnore]
+        public ushort SP {
+            get { return sp.uint16_value; }
+            set { sp.uint16_value = value; }
+        }
+        [XmlIgnore]
+        public ushort DP {
+            get { return dp.uint16_value; }
+            set { dp.uint16_value = value; }
+        }
+        #endregion
+
+		#region Public Methods
+		public void Reset() {
             a.uint16_value = 0x0000;
             x.uint16_value = 0x0000;
             y.uint16_value = 0x0000;
@@ -39,78 +123,16 @@ namespace CPU {
             DB = 0x00;
             P = new StatusRegister(0x34);
             E = true;
-            MMU = new MMU();
-            LoadConfigXML("Opcodes.xml");
-        }
-        #endregion
-
-        #region Properties
-        public byte A {
-            get { return a.uint8_value; }
-            set { a.uint8_value = value; }
-        }
-        public byte B {
-            get { return a.h; }
-            set { a.h = value; }
-        }
-        public ushort C {
-            get { return a.uint16_value; }
-            set { a.uint16_value = value; }
-        }
-        public byte XL {
-            get { return x.uint8_value; }
-            set { x.uint8_value = value; }
-        }
-        public byte XH {
-            get { return x.h; }
-            set { x.h = value; }
-        }
-        public ushort X {
-            get { return x.uint16_value; }
-            set { x.uint16_value = value; }
-        }
-        public byte YL {
-            get { return y.uint8_value; }
-            set { y.uint8_value = value; }
-        }
-        public byte YH {
-            get { return y.h; }
-            set { y.h = value; }
-        }
-        public ushort Y {
-            get { return y.uint16_value; }
-            set { y.uint16_value = value; }
-        }
-        public ushort PC {
-            get { return pc.uint16_value; }
-            set { pc.uint16_value = value; }
-        }
-        public byte PB {
-            get { return pc.b; }
-            set { pc.b = value; }
-        }
-        public uint PCL {
-            get { return pc.uint24_value; }
-            set { pc.uint24_value = value; }
-        }
-        public ushort SP {
-            get { return sp.uint16_value; }
-            set { sp.uint16_value = value; }
-        }
-        public ushort DP {
-            get { return dp.uint16_value; }
-            set { dp.uint16_value = value; }
-        }
-        #endregion
-
-		#region Public Methods
+            if(MMU != null)
+            	MMU.Reset();
+		}
         public string ReadOpcode() {
         	byte opcode = MMU.ReadByte(PCL);
     		op = Opcodes[opcode];
-    		ins = E ? op.Instruction8Bit : op.Instruction16Bit;
-    		opsize = (ins.M && P.M || ins.X && P.X) ? op.AddressingMode.InputLength8Bit : op.AddressingMode.InputLength16Bit;
+    		ins = E ? Instructions[op.InstructionId6502] : Instructions[op.InstructionId65816];
+    		opsize = (ins.M && P.M || ins.X && P.X) ? AddressingModes[op.AddressingModeId].InputLength8Bit : AddressingModes[op.AddressingModeId].InputLength16Bit;
     		operand = MMU.Read24(PCL + 1,opsize);
-    		string format = (ins.M && P.M || ins.X && P.X) ? op.AddressingMode.Format8Bit : op.AddressingMode.Format16Bit;
+    		string format = (ins.M && P.M || ins.X && P.X) ? AddressingModes[op.AddressingModeId].Format8Bit : AddressingModes[op.AddressingModeId].Format16Bit;
     		return string.Format("{0:X6} : ",PCL) + string.Format(format,ins.Name,operand.uint24_value);
         }
 		
@@ -130,7 +152,10 @@ namespace CPU {
     				MMU.WRAM[SP--] = pc.b;
     				MMU.WRAM[SP--] = pc.h;
     				MMU.WRAM[SP--] = pc.uint8_value;
-    				PC = operand.uint16_value;
+    				if(AddressingModes[op.AddressingModeId].InputLength16Bit == 3)
+    					PCL = operand.uint24_value;
+    				else
+    					PC = operand.uint16_value;
     				break;
     			case "LDA":
     				a.uint8_value = operand.uint8_value;
@@ -157,6 +182,11 @@ namespace CPU {
     				break;
     			case "REP":
     				P.Value &= (byte)(~operand.uint8_value);
+    				break;
+    			case "RTS":
+    				pc.uint8_value = MMU.WRAM[++SP];
+    				pc.h = MMU.WRAM[++SP];
+    				pc.b = MMU.WRAM[++SP];
     				break;
     			case "SEI":
     				P.I = true;
@@ -193,7 +223,7 @@ namespace CPU {
 		private reg24 TranslateOperand() 
 		{
 			reg24 newoperand = new reg24();
-			AddressingMode am = op.AddressingMode;
+			AddressingModeId am = AddressingModes[op.AddressingModeId];
 			switch(am.Indirection) {
 				case "Immediate":
 					newoperand = operand;

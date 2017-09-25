@@ -8,10 +8,12 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using CPU;
 using ROM;
 using MMIO;
 using System.IO;
+
 
 namespace Machine {
 	/// <summary>
@@ -21,12 +23,8 @@ namespace Machine {
 		private ROMImage _rom;
 		public ROMImage ROM 
 		{ 
-			get 
-			{
-				return _rom;
-			}
-			set 
-			{
+			get { return _rom; }
+			set {
 				_rom = value;
 				Reset();
 			}
@@ -39,8 +37,8 @@ namespace Machine {
     	}
 		
     	public SNES(string ROMfilepath) {
-    		CPU = new Ricoh5A22();
-    		if(ROMfilepath==null || !File.Exists(ROMfilepath)) {
+			LoadCPUFromConfig("Ricoh5A22.xml");
+			if(ROMfilepath==null || !File.Exists(ROMfilepath)) {
     			ROM = null;    			
     		}
     		else {
@@ -50,10 +48,32 @@ namespace Machine {
     		}
     	}
         public void Reset() {
+			CPU.Reset();
         	CPU.PC = ROM.ResetVector;
         }
     	public void Step() {
 			CPU.ExecuteCurrentOpcode();
     	}
+		
+		private void LoadCPUFromConfig(string path)
+		{
+			XmlSerializer serial;
+			serial = new XmlSerializer(typeof(Ricoh5A22));
+			FileStream s = new FileStream(path,FileMode.Open);
+			CPU = (Ricoh5A22)serial.Deserialize(s);
+			s.Close();
+			CPU.MMU = new MMU();			
+		}
+		
+		public void SaveCPUConfig(string path)
+		{
+			XmlSerializer serial;
+			serial = new XmlSerializer(typeof(Ricoh5A22));
+			XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+			ns.Add("","");
+			FileStream s = new FileStream(path,FileMode.Create);
+			serial.Serialize(s,CPU,ns);
+			s.Close();		
+		}
 	}
 }

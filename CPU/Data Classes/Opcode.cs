@@ -16,9 +16,9 @@ namespace CPU
 	public class Opcode
 	{
 		public byte Id {get;set;}
-		public Instruction Instruction16Bit {get;set;}
-		public Instruction Instruction8Bit {get;set;}
-		public AddressingMode AddressingMode {get;set;}		
+		public byte InstructionId65816 {get;set;}
+		public byte InstructionId6502 {get;set;}
+		public byte AddressingModeId {get;set;}		
 		public Opcode()
     	{
     	}

@@ -115,6 +115,11 @@ namespace SNESStudio {
             }
         }
 
+		private void OpcodesToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			
+		}
+        
         private void tvFiles_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e) {
             TreeNode clickednode = e.Node;
             if (clickednode.Tag != null) {
@@ -156,6 +161,7 @@ namespace SNESStudio {
                             tbFiles.TabPages.Add(tp);
                             ((Scintilla)tp.Controls[0]).AddText(snes.CPU.ReadOpcode());
                             btnStep.Enabled = true;
+                            btnReset.Enabled = true;
                         }
                         break;
                     default:
@@ -176,7 +182,16 @@ namespace SNESStudio {
 			sc.ScrollCaret();
 			RefreshCPU();
 		}
-        #endregion
+
+		void BtnResetClick(object sender, EventArgs e)
+		{
+			snes.Reset();
+			Scintilla sc = (Scintilla)tbFiles.SelectedTab.Controls[0];
+			sc.Text = "";
+			sc.AddText(snes.CPU.ReadOpcode());
+			RefreshCPU();
+		}
+		#endregion
 
         #region Methods
         private void RefreshProject() {
@@ -252,6 +267,20 @@ namespace SNESStudio {
             sc.SetKeywords(0,snes.CPU.GetKeywords());
             return sc;
         }
+		void SaveConfigToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			saveFileDialog1.FileName = "Opcodes.xml";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.DefaultExt = "xml";
+            saveFileDialog1.AddExtension = true;
+            saveFileDialog1.Filter = "XML file (*.xml)|*.xml";
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if(saveFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+            	snes.SaveCPUConfig(saveFileDialog1.FileName);
+            }
+
+		}
         #endregion
     }
 }

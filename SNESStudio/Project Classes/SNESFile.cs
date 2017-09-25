@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace SNESStudio {
     public enum SNESFileType {
@@ -41,7 +42,7 @@ namespace SNESStudio {
             get { return type; }
             set { type = value; }
         }
-        [System.Xml.Serialization.XmlIgnore]
+        [XmlIgnore]
         public bool HasChanged {
             get { return hasChanged; }
             set { hasChanged = value; }

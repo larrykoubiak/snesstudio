@@ -39,6 +39,8 @@
         	this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.mnuProjectAddSource = new System.Windows.Forms.ToolStripMenuItem();
         	this.mnuProjectAddROM = new System.Windows.Forms.ToolStripMenuItem();
+        	this.machineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.opcodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
         	this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
         	this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -88,7 +90,9 @@
         	this.tvFiles = new System.Windows.Forms.TreeView();
         	this.imageList1 = new System.Windows.Forms.ImageList(this.components);
         	this.panel2 = new System.Windows.Forms.Panel();
+        	this.btnReset = new System.Windows.Forms.Button();
         	this.btnStep = new System.Windows.Forms.Button();
+        	this.saveConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.menuStrip1.SuspendLayout();
         	this.statusStrip1.SuspendLayout();
         	this.tableLayoutPanel1.SuspendLayout();
@@ -102,7 +106,8 @@
         	// 
         	this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.mnuFile,
-			this.projectToolStripMenuItem});
+			this.projectToolStripMenuItem,
+			this.machineToolStripMenuItem});
         	this.menuStrip1.Location = new System.Drawing.Point(0, 0);
         	this.menuStrip1.Name = "menuStrip1";
         	this.menuStrip1.Size = new System.Drawing.Size(1350, 24);
@@ -123,28 +128,28 @@
         	// mnuFileNewProject
         	// 
         	this.mnuFileNewProject.Name = "mnuFileNewProject";
-        	this.mnuFileNewProject.Size = new System.Drawing.Size(143, 22);
+        	this.mnuFileNewProject.Size = new System.Drawing.Size(152, 22);
         	this.mnuFileNewProject.Text = "&New Project";
         	this.mnuFileNewProject.Click += new System.EventHandler(this.mnuFileNewProject_Click);
         	// 
         	// mnuFileOpenProject
         	// 
         	this.mnuFileOpenProject.Name = "mnuFileOpenProject";
-        	this.mnuFileOpenProject.Size = new System.Drawing.Size(143, 22);
+        	this.mnuFileOpenProject.Size = new System.Drawing.Size(152, 22);
         	this.mnuFileOpenProject.Text = "&Open Project";
         	this.mnuFileOpenProject.Click += new System.EventHandler(this.mnuFileOpenProject_Click);
         	// 
         	// mnuFileSaveProject
         	// 
         	this.mnuFileSaveProject.Name = "mnuFileSaveProject";
-        	this.mnuFileSaveProject.Size = new System.Drawing.Size(143, 22);
+        	this.mnuFileSaveProject.Size = new System.Drawing.Size(152, 22);
         	this.mnuFileSaveProject.Text = "&Save Project";
         	this.mnuFileSaveProject.Click += new System.EventHandler(this.mnuFileSaveProject_Click);
         	// 
         	// mnuFileQuit
         	// 
         	this.mnuFileQuit.Name = "mnuFileQuit";
-        	this.mnuFileQuit.Size = new System.Drawing.Size(143, 22);
+        	this.mnuFileQuit.Size = new System.Drawing.Size(152, 22);
         	this.mnuFileQuit.Text = "&Quit";
         	this.mnuFileQuit.Click += new System.EventHandler(this.mnuFileQuit_Click);
         	// 
@@ -170,6 +175,22 @@
         	this.mnuProjectAddROM.Size = new System.Drawing.Size(135, 22);
         	this.mnuProjectAddROM.Text = "Add &ROM";
         	this.mnuProjectAddROM.Click += new System.EventHandler(this.mnuProjectAddROM_Click);
+        	// 
+        	// machineToolStripMenuItem
+        	// 
+        	this.machineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.opcodesToolStripMenuItem,
+			this.saveConfigToolStripMenuItem});
+        	this.machineToolStripMenuItem.Name = "machineToolStripMenuItem";
+        	this.machineToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+        	this.machineToolStripMenuItem.Text = "&Machine";
+        	// 
+        	// opcodesToolStripMenuItem
+        	// 
+        	this.opcodesToolStripMenuItem.Name = "opcodesToolStripMenuItem";
+        	this.opcodesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+        	this.opcodesToolStripMenuItem.Text = "&Opcodes";
+        	this.opcodesToolStripMenuItem.Click += new System.EventHandler(this.OpcodesToolStripMenuItemClick);
         	// 
         	// openFileDialog1
         	// 
@@ -220,6 +241,7 @@
         	// 
         	this.propertyGrid1.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
         	this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
+        	this.propertyGrid1.LineColor = System.Drawing.SystemColors.ControlDark;
         	this.propertyGrid1.Location = new System.Drawing.Point(3, 315);
         	this.propertyGrid1.Name = "propertyGrid1";
         	this.propertyGrid1.Size = new System.Drawing.Size(208, 281);
@@ -648,12 +670,24 @@
         	// 
         	// panel2
         	// 
+        	this.panel2.Controls.Add(this.btnReset);
         	this.panel2.Controls.Add(this.btnStep);
         	this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
         	this.panel2.Location = new System.Drawing.Point(1113, 315);
         	this.panel2.Name = "panel2";
         	this.panel2.Size = new System.Drawing.Size(234, 281);
         	this.panel2.TabIndex = 8;
+        	// 
+        	// btnReset
+        	// 
+        	this.btnReset.Enabled = false;
+        	this.btnReset.Location = new System.Drawing.Point(64, 3);
+        	this.btnReset.Name = "btnReset";
+        	this.btnReset.Size = new System.Drawing.Size(55, 23);
+        	this.btnReset.TabIndex = 1;
+        	this.btnReset.Text = "Reset";
+        	this.btnReset.UseVisualStyleBackColor = true;
+        	this.btnReset.Click += new System.EventHandler(this.BtnResetClick);
         	// 
         	// btnStep
         	// 
@@ -665,6 +699,13 @@
         	this.btnStep.Text = "Step";
         	this.btnStep.UseVisualStyleBackColor = true;
         	this.btnStep.Click += new System.EventHandler(this.BtnStepClick);
+        	// 
+        	// saveConfigToolStripMenuItem
+        	// 
+        	this.saveConfigToolStripMenuItem.Name = "saveConfigToolStripMenuItem";
+        	this.saveConfigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+        	this.saveConfigToolStripMenuItem.Text = "&Save Config";
+        	this.saveConfigToolStripMenuItem.Click += new System.EventHandler(this.SaveConfigToolStripMenuItemClick);
         	// 
         	// frmMain
         	// 
@@ -756,6 +797,10 @@
         private System.Windows.Forms.PropertyGrid propertyGrid1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStep;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.ToolStripMenuItem machineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcodesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveConfigToolStripMenuItem;
     }
 }
 

@@ -11,9 +11,9 @@ using System.Xml.Serialization;
 namespace CPU
 {
 	/// <summary>
-	/// Description of AddressingMode.
+	/// Description of AddressingModeId.
 	/// </summary>
-	public class AddressingMode
+	public class AddressingModeId
 	{
 		public byte Id {get;set;}
 		public string Constant {get;set;}
@@ -25,7 +25,7 @@ namespace CPU
 		public string Addressing {get;set;}
 		public string Indirection {get;set;}
 		public string Indexed {get;set;}
-		public AddressingMode()
+		public AddressingModeId()
 		{
 		}
 	}

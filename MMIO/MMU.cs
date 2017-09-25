@@ -64,10 +64,14 @@ namespace MMIO {
 				
 		public MMU() {
 			rom = null;
+			Reset();
+		}
+		
+		public void Reset() {
 			wRAM = new byte[0x20000];
 			aRAM = new byte[0x10000];
 			vRAM = new byte[0x10000];
-			oAM = new byte[0x220];
+			oAM = new byte[0x220];			
 		}
 		public byte ReadByte(uint loc) {
 			address.uint24_value = loc;

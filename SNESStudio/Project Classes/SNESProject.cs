@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace SNESStudio
 {
@@ -22,7 +23,7 @@ namespace SNESStudio
             get { return name; }
             set { name = value; }
         }
-        [System.Xml.Serialization.XmlIgnore]
+        [XmlIgnore]
         public string Path
         {
             get { return path; }
