@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CPU>
 	<AddressingModes>
-		<AddressingModeId>
+		<AddressingMode>
 			<Id>0</Id>
 			<Constant>ADDRESSING_MODE_NOT_APPLICABLE</Constant>
 			<Description>n/a</Description>
@@ -12,8 +12,8 @@
 			<Addressing>NA</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>1</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE</Constant>
 			<Description>Absolute</Description>
@@ -24,8 +24,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>2</Id>
 			<Constant>ADDRESSING_MODE_ACCUMULATOR</Constant>
 			<Description>Accumulator</Description>
@@ -36,8 +36,8 @@
 			<Addressing>Implied</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>3</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_X</Constant>
 			<Description>Absolute Indexed,X</Description>
@@ -48,8 +48,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>X</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>4</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_Y</Constant>
 			<Description>Absolute Indexed,Y</Description>
@@ -60,8 +60,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>Y</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>5</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_LONG</Constant>
 			<Description>Absolute Long</Description>
@@ -72,8 +72,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>6</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_LONG_INDEXED_X</Constant>
 			<Description>Absolute Long Indexed,X</Description>
@@ -84,8 +84,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>X</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>7</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDIRECT</Constant>
 			<Description>Absolute Indirect</Description>
@@ -96,8 +96,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>8</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDIRECT_LONG</Constant>
 			<Description>Absolute Indirect Long</Description>
@@ -108,8 +108,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>9</Id>
 			<Constant>ADDRESSING_MODE_ABSOLUTE_INDEXED_INDIRECT_X</Constant>
 			<Description>Absolute Indexed Indirect</Description>
@@ -120,8 +120,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>X</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>10</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE</Constant>
 			<Description>Direct Page</Description>
@@ -132,8 +132,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>11</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_X</Constant>
 			<Description>DP Indexed,X</Description>
@@ -144,8 +144,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>X</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>12</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_Y</Constant>
 			<Description>DP Indexed,Y</Description>
@@ -156,8 +156,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>Y</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>13</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT</Constant>
 			<Description>DP Indirect</Description>
@@ -168,8 +168,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>14</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_LONG</Constant>
 			<Description>DP Indirect Long</Description>
@@ -180,8 +180,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>15</Id>
 			<Constant>ADDRESSING_MODE_STACK_RELATIVE_INDIRECT_INDEXED_Y</Constant>
 			<Description>SR Indirect Indexed,Y</Description>
@@ -192,8 +192,8 @@
 			<Addressing>Stack</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>Y</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>16</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDEXED_INDIRECT_X</Constant>
 			<Description>DP Indexed Indirect,X</Description>
@@ -204,8 +204,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>X</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>17</Id>
 			<Constant>ADDRESSING_MODE_STACK_RELATIVE</Constant>
 			<Description>Stack Relative</Description>
@@ -216,8 +216,8 @@
 			<Addressing>Stack</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>18</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_INDEXED_Y</Constant>
 			<Description>DP Indirect Indexed, Y</Description>
@@ -228,8 +228,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>Y</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>19</Id>
 			<Constant>ADDRESSING_MODE_DIRECT_PAGE_INDIRECT_LONG_INDEXED_Y</Constant>
 			<Description>DP Indirect Long Indexed, Y</Description>
@@ -240,8 +240,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>Y</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>20</Id>
 			<Constant>ADDRESSING_MODE_IMPLIED</Constant>
 			<Description>Implied</Description>
@@ -252,8 +252,8 @@
 			<Addressing>Implied</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>21</Id>
 			<Constant>ADDRESSING_MODE_PROGRAM_COUNTER_RELATIVE</Constant>
 			<Description>Program Counter Relative</Description>
@@ -264,8 +264,8 @@
 			<Addressing>Program Counter</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>22</Id>
 			<Constant>ADDRESSING_MODE_PROGRAM_COUNTER_RELATIVE_LONG</Constant>
 			<Description>Program Counter Relative Long</Description>
@@ -276,8 +276,8 @@
 			<Addressing>Program Counter</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>23</Id>
 			<Constant>ADDRESSING_MODE_STACK</Constant>
 			<Description>Stack</Description>
@@ -288,8 +288,8 @@
 			<Addressing>Implied</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>24</Id>
 			<Constant>ADDRESSING_MODE_STACK_ABSOLUTE</Constant>
 			<Description>Stack (Absolute)</Description>
@@ -300,8 +300,8 @@
 			<Addressing>Absolute</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>25</Id>
 			<Constant>ADDRESSING_MODE_STACK_DIRECT_PAGE_INDIRECT</Constant>
 			<Description>Stack (DP Indirect)</Description>
@@ -312,8 +312,8 @@
 			<Addressing>Direct Page</Addressing>
 			<Indirection>Indirect</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>26</Id>
 			<Constant>ADDRESSING_MODE_STACK_PROGRAM_COUNTER_RELATIVE</Constant>
 			<Description>Stack (PC Relative Long)</Description>
@@ -324,8 +324,8 @@
 			<Addressing>Program Counter</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>27</Id>
 			<Constant>ADDRESSING_MODE_STACK_INTERRUPT</Constant>
 			<Description>Stack/Interrupt</Description>
@@ -336,8 +336,8 @@
 			<Addressing>Implied</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>28</Id>
 			<Constant>ADDRESSING_MODE_BLOCK_MOVE</Constant>
 			<Description>Block Move</Description>
@@ -348,8 +348,8 @@
 			<Addressing>Block</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>29</Id>
 			<Constant>ADDRESSING_MODE_IMMEDIATE</Constant>
 			<Description>Immediate</Description>
@@ -360,8 +360,8 @@
 			<Addressing>Immediate</Addressing>
 			<Indirection>Immediate</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
-		<AddressingModeId>
+		</AddressingMode>
+		<AddressingMode>
 			<Id>30</Id>
 			<Constant>ADDRESSING_MODE_IMMEDIATE_STATUS</Constant>
 			<Description>Immediate (Status)</Description>
@@ -372,7 +372,7 @@
 			<Addressing>Immediate</Addressing>
 			<Indirection>Immediate</Indirection>
 			<Indexed>NA</Indexed>
-		</AddressingModeId>
+		</AddressingMode>
 	</AddressingModes>
 	<Instructions>
 		<Instruction>

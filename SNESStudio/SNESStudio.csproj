@@ -67,6 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEditOpcodes.cs" />
+    <Compile Include="frmEditOpcodes.Designer.cs">
+      <DependentUpon>frmEditOpcodes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +94,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Project Classes\SNESFile.cs" />
     <Compile Include="Project Classes\SNESProject.cs" />
+    <EmbeddedResource Include="frmEditOpcodes.resx">
+      <DependentUpon>frmEditOpcodes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

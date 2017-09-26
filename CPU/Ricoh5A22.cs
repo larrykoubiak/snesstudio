@@ -223,7 +223,7 @@ namespace CPU {
 		private reg24 TranslateOperand() 
 		{
 			reg24 newoperand = new reg24();
-			AddressingModeId am = AddressingModes[op.AddressingModeId];
+			AddressingMode am = AddressingModes[op.AddressingModeId];
 			switch(am.Indirection) {
 				case "Immediate":
 					newoperand = operand;

@@ -20,13 +20,13 @@ namespace CPU
 	public abstract class Processor
 	{
 		public List<Opcode> Opcodes {get; set;}
-		public List<AddressingModeId> AddressingModes {get;set;}
+		public List<AddressingMode> AddressingModes {get;set;}
 		public List<Instruction> Instructions {get;set;}
 		
 		protected Processor()
 		{
 			Opcodes = new List<Opcode>();
-			AddressingModes = new List<AddressingModeId>();
+			AddressingModes = new List<AddressingMode>();
 			Instructions = new List<Instruction>();
 		}
 

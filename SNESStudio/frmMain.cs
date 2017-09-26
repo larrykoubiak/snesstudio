@@ -117,7 +117,11 @@ namespace SNESStudio {
 
 		private void OpcodesToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			
+			frmEditOpcodes OpcodeEditor = new frmEditOpcodes(snes.CPU);
+			if(OpcodeEditor.ShowDialog()==DialogResult.OK)
+			{
+				RefreshCPU();
+			}
 		}
         
         private void tvFiles_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e) {
@@ -279,7 +283,6 @@ namespace SNESStudio {
             {
             	snes.SaveCPUConfig(saveFileDialog1.FileName);
             }
-
 		}
         #endregion
     }

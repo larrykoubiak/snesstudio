@@ -13,7 +13,7 @@ namespace CPU
 	/// <summary>
 	/// Description of AddressingModeId.
 	/// </summary>
-	public class AddressingModeId
+	public class AddressingMode
 	{
 		public byte Id {get;set;}
 		public string Constant {get;set;}
@@ -25,7 +25,7 @@ namespace CPU
 		public string Addressing {get;set;}
 		public string Indirection {get;set;}
 		public string Indexed {get;set;}
-		public AddressingModeId()
+		public AddressingMode()
 		{
 		}
 	}
