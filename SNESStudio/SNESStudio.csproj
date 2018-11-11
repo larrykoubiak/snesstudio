@@ -67,7 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmEditOpcodes.cs" />
+    <Compile Include="frmEditOpcodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEditOpcodes.Designer.cs">
       <DependentUpon>frmEditOpcodes.cs</DependentUpon>
     </Compile>
@@ -118,6 +120,8 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CPU.AddressingMode.datasource" />
+    <None Include="Properties\DataSources\CPU.Instruction.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,16 +140,24 @@
     <Content Include="snes.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonTypes\CommonTypes.csproj">
+      <Project>{32befb85-d71a-4b6f-93ff-63427193ca0f}</Project>
+      <Name>CommonTypes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CPU\CPU.csproj">
-      <Project>{22404EF7-9A5F-444B-8841-6531A2B6FCBD}</Project>
+      <Project>{22404ef7-9a5f-444b-8841-6531a2b6fcbd}</Project>
       <Name>CPU</Name>
     </ProjectReference>
     <ProjectReference Include="..\Machine\Machine.csproj">
-      <Project>{1A67D27E-68A0-4D37-812D-6D72FD26F547}</Project>
+      <Project>{1a67d27e-68a0-4d37-812d-6d72fd26f547}</Project>
       <Name>Machine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MMIO\MMIO.csproj">
+      <Project>{7700975c-c211-4845-994c-462ee26a1760}</Project>
+      <Name>MMIO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ROM\ROM.csproj">
-      <Project>{46410D6D-234A-48DF-98CA-CD8783DE130C}</Project>
+      <Project>{46410d6d-234a-48df-98ca-cd8783de130c}</Project>
       <Name>ROM</Name>
     </ProjectReference>
   </ItemGroup>

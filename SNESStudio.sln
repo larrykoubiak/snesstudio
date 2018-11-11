@@ -1,8 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-# SharpDevelop 5.1
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNESStudio", "SNESStudio\SNESStudio.csproj", "{C6330951-F9EB-4D9A-99ED-77577877A476}"
 EndProject
@@ -50,24 +49,20 @@ Global
 		{7700975C-C211-4845-994C-462EE26A1760}.Debug|Any CPU.Build.0 = Debug|x86
 		{7700975C-C211-4845-994C-462EE26A1760}.Debug|x86.ActiveCfg = Debug|x86
 		{7700975C-C211-4845-994C-462EE26A1760}.Debug|x86.Build.0 = Debug|x86
-		{7700975C-C211-4845-994C-462EE26A1760}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7700975C-C211-4845-994C-462EE26A1760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7700975C-C211-4845-994C-462EE26A1760}.Release|Any CPU.ActiveCfg = Release|x86
 		{7700975C-C211-4845-994C-462EE26A1760}.Release|x86.ActiveCfg = Release|x86
 		{7700975C-C211-4845-994C-462EE26A1760}.Release|x86.Build.0 = Release|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Debug|Any CPU.Build.0 = Debug|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Debug|x86.ActiveCfg = Debug|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Debug|x86.Build.0 = Debug|x86
-		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|Any CPU.ActiveCfg = Release|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|x86.ActiveCfg = Release|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|x86.Build.0 = Release|x86
-		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x86.ActiveCfg = Debug|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x86.Build.0 = Debug|x86
-		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|Any CPU.ActiveCfg = Release|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|x86.ActiveCfg = Release|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
