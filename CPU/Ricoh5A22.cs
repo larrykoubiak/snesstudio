@@ -133,7 +133,7 @@ namespace CPU {
     		opsize = (ins.M && P.M || ins.X && P.X) ? AddressingModes[op.AddressingModeId].InputLength8Bit : AddressingModes[op.AddressingModeId].InputLength16Bit;
     		operand = MMU.Read24(PCL + 1,opsize);
     		string format = (ins.M && P.M || ins.X && P.X) ? AddressingModes[op.AddressingModeId].Format8Bit : AddressingModes[op.AddressingModeId].Format16Bit;
-    		return string.Format("{0:X6} : ",PCL) + string.Format(format,ins.Name,operand.uint24_value);
+    		return string.Format("0x{0:X6} : ",PCL) + string.Format(format,ins.Name,operand.uint24_value) + Environment.NewLine;
         }
 		
 		public void ExecuteCurrentOpcode()
@@ -250,7 +250,7 @@ namespace CPU {
 							}
 							break;
 						case "Direct Page":
-							switch(am.Indexed) {
+                            switch (am.Indexed) {
 								case "NA":
 									newoperand.uint24_value = (ushort)(DP + operand.uint8_value);
 									break;
@@ -258,7 +258,7 @@ namespace CPU {
 									newoperand.uint24_value = (ushort)((DP + operand.uint8_value) + (P.M ? XL : X));
 									break;
 								case "Y":
-									newoperand.uint24_value = (ushort)((DP + operand.uint8_value) + (P.M ? XL : X));
+									newoperand.uint24_value = (ushort)((DP + operand.uint8_value) + (P.M ? YL : Y));
 									break;
 							}
 							break;
@@ -270,8 +270,35 @@ namespace CPU {
 					}
 					break;
 				case "Indirect":
-					//TO DO
-					break;
+                    switch (am.Addressing)
+                    {
+                        case "Absolute":
+                            newoperand.b = PB;
+                            reg24 src = new reg24();
+                            src.b = PB;
+                            switch (am.Indexed)
+                            {
+                                case "NA":
+                                    src.uint16_value = operand.uint16_value;
+                                    newoperand.uint16_value = MMU.Read16(src.uint24_value).uint16_value;
+                                    break;
+                                case "X":
+                                    src.uint16_value = (ushort)(operand.uint16_value + (P.M ? XL : X));
+                                    newoperand.uint16_value = MMU.Read16(src.uint24_value).uint16_value;
+                                    break;
+                                case "Y":
+                                    src.uint16_value = operand.uint16_value;
+                                    if(P.M)
+                                        newoperand.uint16_value = (ushort)(MMU.ReadByte(src.uint24_value) + YL);
+                                    else
+                                        newoperand.uint16_value = (ushort)(MMU.Read16(src.uint24_value).uint16_value + Y);
+                                    break;
+                            }
+                            break;
+                        default:
+                            return operand;
+                    }
+                    break;
 				default:					
 					break;
 			}

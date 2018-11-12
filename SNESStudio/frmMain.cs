@@ -9,13 +9,14 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using ScintillaNET;
-using Machine; 
+using Machine;
 namespace SNESStudio {
     public partial class frmMain : Form {
 		#region Members
         private SNESProject project;
         private SNES snes;
         private SNESFile currentFile;
+        private SNESStudio_Lexer sneslexer;
         #endregion
 
         #region Properties
@@ -182,7 +183,7 @@ namespace SNESStudio {
 		{
 			snes.CPU.ExecuteCurrentOpcode();
 			Scintilla sc = (Scintilla)tbFiles.SelectedTab.Controls[0];
-			sc.AddText(Environment.NewLine + snes.CPU.ReadOpcode());
+			sc.AddText(snes.CPU.ReadOpcode());
 			sc.ScrollCaret();
 			RefreshCPU();
 		}
@@ -257,21 +258,32 @@ namespace SNESStudio {
             sc.StyleResetDefault();
             sc.Styles[Style.Default].Font = "Consolas";
             sc.Styles[Style.Default].Size = 10;
-            sc.Styles[Style.Default].BackColor = Color.FromArgb(41, 49, 52);
+            sc.Styles[Style.Default].BackColor = Color.FromArgb(0x1E, 0x1E, 0x1E);
             sc.StyleClearAll();
-            sc.Lexer = Lexer.Cpp;
-            sc.Styles[Style.Cpp.Word].ForeColor = Color.FromArgb(147, 199, 99);
-            sc.Styles[Style.Cpp.Word].Bold = true;
-            sc.Styles[Style.Cpp.Identifier].ForeColor = Color.FromArgb(255, 255, 255);
-            sc.Styles[Style.Cpp.Character].ForeColor = Color.FromArgb(236, 118, 0);
-            sc.Styles[Style.Cpp.Number].ForeColor = Color.FromArgb(255, 205, 34);
-            sc.Styles[Style.Cpp.Operator].ForeColor = Color.FromArgb(232, 226, 183);
-            sc.Styles[Style.Cpp.Comment].ForeColor = Color.FromArgb(102, 116, 123);
-            //CPU Instructions				            
-            sc.SetKeywords(0,snes.CPU.GetKeywords());
+            sc.Lexer = Lexer.Container;
+            sc.Styles[SNESStudio_Lexer.StyleKeyword].ForeColor = Color.FromArgb(0x56,0x9c,0xd6);
+            sc.Styles[SNESStudio_Lexer.StyleKeyword].Bold = true;
+            sc.Styles[SNESStudio_Lexer.StyleDefault].ForeColor = Color.FromArgb(0xD4,0xD4,0xD4);
+            sc.Styles[SNESStudio_Lexer.StyleIdentifier].ForeColor = Color.FromArgb(0xff, 0xff, 0xff);
+            sc.Styles[SNESStudio_Lexer.StyleString].ForeColor = Color.FromArgb(0xce, 0x91, 0x78);
+            sc.Styles[SNESStudio_Lexer.StyleNumber].ForeColor = Color.FromArgb(0xb5, 0xce, 0xa8);
+            sc.Styles[SNESStudio_Lexer.StyleOperator].ForeColor = Color.FromArgb(0xf4,0x47,0x47);
+            //sc.Styles[Style.Cpp.Operator].ForeColor = Color.FromArgb(232, 226, 183);
+            //sc.Styles[Style.Cpp.Comment].ForeColor = Color.FromArgb(102, 116, 123);
+            //CPU Instructions				         
+            this.sneslexer = new SNESStudio_Lexer(snes.CPU.GetKeywords());
+            sc.StyleNeeded += new EventHandler<StyleNeededEventArgs>(Sc_StyleNeeded);
+            //sc.SetKeywords(0,snes.CPU.GetKeywords());
             return sc;
         }
-		void SaveConfigToolStripMenuItemClick(object sender, EventArgs e)
+        private void Sc_StyleNeeded(object sender, StyleNeededEventArgs e)
+        {
+            Scintilla scintilla = (Scintilla)tbFiles.SelectedTab.Controls[0];
+            var startPos = scintilla.GetEndStyled();
+            var endPos = e.Position;
+            sneslexer.Style(scintilla, startPos, endPos);
+        }
+        void SaveConfigToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			saveFileDialog1.FileName = "Opcodes.xml";
             saveFileDialog1.FileName = "";

@@ -126,6 +126,13 @@ namespace MMIO {
 			}
 			return buf;
 		}
+        public reg16 Read16(uint loc)
+        {
+            reg16 buf = new reg16();
+            buf.uint8_value = ReadByte(loc);
+            buf.h = ReadByte(loc + 1);
+            return buf;
+        }
 		public reg24 Read24(uint loc,byte length)
 		{
 			byte idx = 0;
