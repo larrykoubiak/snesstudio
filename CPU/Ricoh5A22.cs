@@ -140,30 +140,30 @@ namespace CPU {
 		{
 			PC++;
 			PC+=opsize;
-			TranslateOperand();
+			reg24 newop = TranslateOperand();
     		switch (ins.Name) {
     			case "CLC":
     				P.C = false;
     				break;
     			case "JMP":
-    				PCL = operand.uint24_value;
+    				PCL = newop.uint24_value;
     				break;
     			case "JSR":
     				MMU.WRAM[SP--] = pc.b;
     				MMU.WRAM[SP--] = pc.h;
     				MMU.WRAM[SP--] = pc.uint8_value;
     				if(AddressingModes[op.AddressingModeId].InputLength16Bit == 3)
-    					PCL = operand.uint24_value;
+    					PCL = newop.uint24_value;
     				else
-    					PC = operand.uint16_value;
+    					PC = newop.uint16_value;
     				break;
     			case "LDA":
-    				a.uint8_value = operand.uint8_value;
-    				if(!P.M) a.h = operand.h;
+    				a.uint8_value = newop.uint8_value;
+    				if(!P.M) a.h = newop.h;
     				break;
     			case "LDX":
-    				x.uint8_value = operand.uint8_value;
-    				if(!P.X) x.h = operand.h;
+    				x.uint8_value = newop.uint8_value;
+    				if(!P.X) x.h = newop.h;
     				break;
     			case "PHA":
     				MMU.WRAM[SP--] = a.uint8_value;
@@ -181,7 +181,7 @@ namespace CPU {
     				dp.uint8_value = MMU.WRAM[SP++];
     				break;
     			case "REP":
-    				P.Value &= (byte)(~operand.uint8_value);
+    				P.Value &= (byte)(~newop.uint8_value);
     				break;
     			case "RTS":
     				pc.uint8_value = MMU.WRAM[++SP];
@@ -192,7 +192,7 @@ namespace CPU {
     				P.I = true;
     				break;
     			case "SEP":
-    				P.Value |= operand.uint8_value;
+    				P.Value |= newop.uint8_value;
     				break;
     			case "TAX":
     				x.uint8_value = a.uint8_value;
@@ -232,16 +232,20 @@ namespace CPU {
 					switch(am.Addressing) {
 						case "Implied":
 							break;
+                        case "Absolute Long":
+                            newoperand = operand;
+                            break;
 						case "Absolute":
-							switch(am.Indexed) {
+                            newoperand.b = PB;
+                            switch (am.Indexed) {
 								case "NA":
-									newoperand = operand;
+									newoperand.uint16_value = operand.uint16_value;
 									break;
 								case "X":
-									newoperand.uint24_value = (ushort)(operand.uint24_value + (P.M ? XL : X));
+									newoperand.uint16_value = (ushort)(operand.uint16_value + (P.M ? XL : X));
 									break;
 								case "Y":
-									newoperand.uint24_value = (ushort)(operand.uint24_value + (P.M ? XL : X));
+									newoperand.uint16_value = (ushort)(operand.uint16_value + (P.M ? YL : Y));
 									break;
 							}
 							break;

@@ -69,7 +69,7 @@
 			<Format16Bit>{0} !${1:X6}</Format16Bit>
 			<InputLength8Bit>3</InputLength8Bit>
 			<InputLength16Bit>3</InputLength16Bit>
-			<Addressing>Absolute</Addressing>
+			<Addressing>Absolute Long</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>NA</Indexed>
 		</AddressingMode>
@@ -81,7 +81,7 @@
 			<Format16Bit>{0} !${1:X6}, X</Format16Bit>
 			<InputLength8Bit>3</InputLength8Bit>
 			<InputLength16Bit>3</InputLength16Bit>
-			<Addressing>Absolute</Addressing>
+			<Addressing>Absolute Long</Addressing>
 			<Indirection>Direct</Indirection>
 			<Indexed>X</Indexed>
 		</AddressingMode>
