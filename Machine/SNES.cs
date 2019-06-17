@@ -26,7 +26,8 @@ namespace Machine {
 			get { return _rom; }
 			set {
 				_rom = value;
-				Reset();
+                if(_rom!= null)
+				    Reset();
 			}
 		}
 

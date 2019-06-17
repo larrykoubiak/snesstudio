@@ -28,6 +28,7 @@ namespace SNESStudio {
         #region Constructor
         public frmMain() {
             InitializeComponent();
+            snes = new SNES();
         }
         #endregion
 
@@ -119,7 +120,7 @@ namespace SNESStudio {
 		private void OpcodesToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			frmEditOpcodes OpcodeEditor = new frmEditOpcodes(snes.CPU);
-			if(OpcodeEditor.ShowDialog()==DialogResult.OK)
+			if(OpcodeEditor.ShowDialog()==DialogResult.OK && snes.ROM != null)
 			{
 				RefreshCPU();
 			}

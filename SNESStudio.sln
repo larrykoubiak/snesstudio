@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNESStudio", "SNESStudio\SNESStudio.csproj", "{C6330951-F9EB-4D9A-99ED-77577877A476}"
 EndProject
@@ -24,6 +24,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x64.ActiveCfg = Debug|x86
+		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x64.Build.0 = Debug|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x86.ActiveCfg = Debug|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Debug|x86.Build.0 = Debug|x86
 		{C6330951-F9EB-4D9A-99ED-77577877A476}.Release|x64.ActiveCfg = Release|x86
@@ -60,6 +61,7 @@ Global
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|x86.ActiveCfg = Release|x86
 		{1A67D27E-68A0-4D37-812D-6D72FD26F547}.Release|x86.Build.0 = Release|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x64.ActiveCfg = Debug|x86
+		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x64.Build.0 = Debug|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x86.ActiveCfg = Debug|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Debug|x86.Build.0 = Debug|x86
 		{32BEFB85-D71A-4B6F-93FF-63427193CA0F}.Release|x64.ActiveCfg = Release|x86
@@ -68,5 +70,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21685A81-42A0-4F7A-B582-4578D0876A33}
 	EndGlobalSection
 EndGlobal
